@@ -1,18 +1,19 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { Navbar } from "../components/Navbar/Navbar";
+
+import { NETWORK } from "../const/contractAddresses";
 import "../styles/globals.css";
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "ethereum";
+
+const activeChain = "polygon";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider
-      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
-      activeChain={activeChain}
-    >
+    <ThirdwebProvider 
+    clientId="1f9299646db2cb55a1505c9032a58601"
+    activeChain={activeChain}>
+      <Navbar/>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );

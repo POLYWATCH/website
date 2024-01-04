@@ -1,22 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
-}
-
-a {
-  color: #84309c;
-  text-decoration: none;
+  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: dark;
+}
+
+
 body {
-  color: #e7e8e8;
-  background: #070707;
+  color: #fefafa;
+  background: #0c0c0c;
+  --color-primary: #fada3f;
+  --color-secondary: #7b0595;
+  --color-tertiary: #6f029e;
+  --color-quaternary: #9b4dff;
+  --card-background: #470466;
+  --highlighted-background: #080909;
+  font-weight: 400;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Altezza della linea */
+  background: linear-gradient(to right, transparent, var(--color-secondary), transparent);
+  animation: moveLine 4s linear infinite; /* Regola la durata e il tipo di animazione */
+}
+
+@keyframes moveLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
