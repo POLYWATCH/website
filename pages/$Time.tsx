@@ -66,7 +66,7 @@ const TimePage: NextPage = () => {
     
       try {
         const mintParams: TokenParams = {
-          to: "0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2",
+          to: "0x40617B73b3115ba887405B503FeF32c98a7dB714",
           amount: amount,
           price: price,
         };
@@ -240,7 +240,7 @@ const TimePage: NextPage = () => {
       <SimpleGrid columns={3} spacing={4} mt={4} width="100%" margin="auto">
         {!isVerifiedTokensLoading ? (
           verifiedTokens.map((token: string) => (
-            <BalanceCard key={token} tokenAddress={token} />
+            <BalanceCard key={token} tokenAddress={"0x40617B73b3115ba887405B503FeF32c98a7dB714"} />
           ))
         ) : (
           <Spinner />
