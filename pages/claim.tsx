@@ -28,7 +28,7 @@ const AboutUs: React.FC = () => {
       {/* Your title and other content */}
       <h1 className={styles.heroTitle}>
         <p className={styles.herotitle}></p>
-        <span className={styles.heroTitleGradient}>CLAIM YOUR POLYWATCH ON 10/01/2024</span>
+        <span className={styles.heroTitleGradient}>CLAIM YOUR POLYWATCH ON 20/01/2024</span>
       </h1>
       <MediaRenderer
   src="ipfs://QmVoBUk7ybvQLTFirvwDkrdkLNh4wAVBM1LrsuSnhwdjxC/IOBO.gif"  
