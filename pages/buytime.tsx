@@ -308,7 +308,7 @@ import Link from "next/link";
 
 
         <p className={styles.heroSubtitle}>
-          Price: 1 MATIC = 100 tIME
+          Price: 1 MATIC = 100 TIME
           <br />
           Every 500,000 TIME tokens minted increases the price by 20%.
         </p>
