@@ -298,7 +298,7 @@ import Link from "next/link";
       )}
     </div>
  <p className={styles.heroSubtitle}>
-          TYPE 1000000 TO SE MAX CLAIMABLE IF ELIGIBLE
+         IF ELIGIBLE TYPE 1000000 TO SEE HOW MANY $TIME YOU CAN CLAIM
           <br />
           
         </p>
