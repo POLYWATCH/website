@@ -297,7 +297,11 @@ import Link from "next/link";
         </>
       )}
     </div>
-
+ <p className={styles.heroSubtitle}>
+          TYPE 1000000 TO SE MAX CLAIMABLE IF ELIGIBLE
+          <br />
+          
+        </p>
     <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
