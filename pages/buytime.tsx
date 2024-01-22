@@ -317,9 +317,14 @@ import Link from "next/link";
           Every 500,000 TIME tokens minted increases the price by 20%.
         </p>
         
-        <Link className={styles.heroCta} href="https://polygonscan.com/token/0x40617B73b3115ba887405B503FeF32c98a7dB714">
-                      CLICK HERE TO IMPORT $TIME TO YOUR WALLET
-                    </Link>
+       <Link
+  className={styles.heroCta}
+  href="https://polygonscan.com/address/0x40617B73b3115ba887405B503FeF32c98a7dB714"
+  style={{ color: 'gold' }}
+>
+  CLICK HERE TO IMPORT $TIME TO YOUR WALLET
+</Link>
+
        
       </div>
     );
