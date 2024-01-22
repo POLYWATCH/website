@@ -228,11 +228,11 @@ import Link from "next/link";
         ) : (
           <>
             
-            <h2 className={styles.title}>BUY $TIME AND JOIN THE MOVEMENT</h2>
-            <p className={styles.explain}>
-              Claim for FREE if you are a past owner
-              <span className={styles.pink}></span>
-            </p>
+           <h2 className={styles.title} style={{ textAlign: 'center' }}>
+  <div>BUY $TIME</div>
+  <div>JOIN THE MOVEMENT</div>
+</h2>
+
           </>
         )}
   <MediaRenderer
