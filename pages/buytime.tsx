@@ -293,7 +293,7 @@ import Link from "next/link";
       {claimedSupply.data && (
         <>
           
-         <p style={{ color: 'gold' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue}</p
+         <p style={{ color: 'gold' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue}</p>
         </>
       )}
     </div>
