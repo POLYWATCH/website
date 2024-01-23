@@ -236,19 +236,7 @@ const {
   </Flex>
 )}
 
-<Container maxWidth={"md"}>
-  <Flex
-    flexDirection={"column"}
-    justifyContent={"center"}
-    alignItems={"center"}
-    borderRadius="md"
-    p={6}
-    mt={8}
-  >
-    <TransferCard />
-    <Events />
-  </Flex>
-</Container>
+
 
 </div>
 
