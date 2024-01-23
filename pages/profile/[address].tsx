@@ -8,7 +8,7 @@ import {
   useValidEnglishAuctions,
 } from "@thirdweb-dev/react";
 import router, { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Container from "../../components/Container/Container";
 import ListingWrapper from "../../components/ListingWrapper/ListingWrapper";
 import NFTGrid from "../../components/NFT/NFTGrid";
@@ -16,12 +16,16 @@ import Skeleton from "../../components/Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
+  TRANSFER_CONTRACT_ADDRESS,
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
 import randomColor from "../../util/randomColor";
-
-
-
+import TransferCard from "../../components/TransferCard";
+import { Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
+import BalanceCard from "../../components/BalanceCard";
+import Events from "../../components/Events";
+import { Canvas, useLoader, useThree } from "react-three-fiber";
+import THREE from "three";
 
 
 
@@ -47,6 +51,39 @@ export default function ProfilePage() {
 
 
  
+const address = useAddress();
+
+
+function truncateAddress(address: string) {
+    return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
+};
+const { contract } = useContract(TRANSFER_CONTRACT_ADDRESS); // Replace with your contract address
+
+const { 
+    contract: transferContract,
+} = useContract(TRANSFER_CONTRACT_ADDRESS);
+
+const {
+    data: verifiedTokens,
+    isLoading: isVerifiedTokensLoading,
+} = useContractRead(
+    transferContract,
+    "getVerifiedTokens"
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -80,7 +117,8 @@ export default function ProfilePage() {
     useValidEnglishAuctions(marketplace, {
       seller: router.query.address as string,
     });
-    
+  
+
   return (
     <Container maxWidth="lg">
       <div className={styles.profileHeader}>
@@ -108,6 +146,132 @@ export default function ProfilePage() {
           )}
         </h1>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* Terza sezione con l'accesso alle opportunità */}
+       
+        <div className={styles.hero}>
+          <div className={styles.heroBodyContainer}>
+            <div className={styles.heroBody}>
+              <h1 className={styles.heroTitle}>
+                <span className={styles.heroTitleGradient}>
+                  $TIME PRIVATE USER SECTION
+                </span>
+              </h1>
+              
+
+              <div style={{ margin: '10px' }}>
+  {/* Content of the first section */}
+</div>
+{/* Empty space */}
+<div style={{ height: '10px' }} />
+              </div>
+          </div>
+             
+         
+              {address ? (
+  <Flex>
+    <Flex flexDirection={"column"} mr={8} p={10}>
+      
+      
+    </Flex>
+   
+    <div className={styles.heroBodyContainer}>
+  <div className={styles.heroBody}>
+    <h1 className={styles.heroTitle}>
+      <span className={styles.heroTitle}>
+        YOUR $TIME BALANCE
+      </span>
+    </h1>
+   
+    
+    <MediaRenderer
+                    src="ipfs://QmQ8ywg5bcgNGefKKk1Ur6FX8iDmVT2AKU3MB6vC1wRLCu/4g5.png"
+                    style={{ width: "60%", height: "auto", maxWidth: "200px" }}
+                  />   
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+<SimpleGrid columns={3} spacing={4} mt={4} width="100%" margin="auto">
+        {!isVerifiedTokensLoading ? (
+          verifiedTokens.map((token: string) => (
+            <BalanceCard key={token} tokenAddress={"0x40617B73b3115ba887405B503FeF32c98a7dB714"} />
+          ))
+        ) : (
+          <Spinner />
+        )}
+      </SimpleGrid>
+    </Flex>
+  
+) : (
+  <Flex>
+    <p>CONNECT YOUR WALLET TO SEE YOUR BALANCE</p>
+  </Flex>
+)}
+
+<Container maxWidth={"md"}>
+  <Flex
+    flexDirection={"column"}
+    justifyContent={"center"}
+    alignItems={"center"}
+    borderRadius="md"
+    p={6}
+    mt={8}
+  >
+    <TransferCard />
+    <Events />
+  </Flex>
+</Container>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div className={styles.tabs}>
         <h3
