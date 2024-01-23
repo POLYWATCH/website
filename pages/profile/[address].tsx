@@ -24,9 +24,6 @@ import TransferCard from "../../components/TransferCard";
 import { Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
 import BalanceCard from "../../components/BalanceCard";
 import Events from "../../components/Events";
-import { Canvas, useLoader, useThree } from "react-three-fiber";
-import THREE from "three";
-
 
 
 
