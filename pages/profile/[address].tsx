@@ -170,9 +170,7 @@ const {
           <div className={styles.heroBodyContainer}>
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
-                <span className={styles.heroTitleGradient}>
-                  $TIME PRIVATE USER SECTION
-                </span>
+                
               </h1>
               
 
