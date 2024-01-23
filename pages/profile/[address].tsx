@@ -116,22 +116,16 @@ const {
     });
   
 
-  return (
+   return (
     <Container maxWidth="lg">
-      <div className={styles.profileHeader}>
-      <div
-  className={styles.coverImage}
-  style={{
-    background: 'linear-gradient(90deg, #b8860b, #ffd700)', // Dark gold to light gold gradient
-  }}
-/>
-
-<div
-  className={styles.profilePicture}
-  style={{
-    background: 'linear-gradient(90deg, #000000, #ffd700)', // Black to gold gradient
-  }}
-/>
+    
+    <div className={styles.profileHeader}>
+      <div className={styles.coverImage}>
+        <div className={styles.overlay}></div>
+        
+      </div>
+      {/* Altri contenuti della sezione utente */}
+    </div>
 
         <h1 className={styles.profileName}>
           {router.query.address ? (
@@ -142,7 +136,7 @@ const {
             <Skeleton width="320" />
           )}
         </h1>
-      </div>
+      
 
 
 
