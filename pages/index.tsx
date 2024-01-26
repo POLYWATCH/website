@@ -34,7 +34,7 @@ const Home: NextPage = () => {
               <div className={styles.heroBackgroundInner}>
               
               <MediaRenderer
-  src="ipfs://QmUSabGiiQX2Bpdq16WAG8WVpF8NLcAwypGmuVDG8pCuUF/plexus_-_27669%20(1440p).mp4"  
+  src="/images/3567.png"  
   width="100%"
   height="100%"
   style={{ maxWidth: '100%', maxHeight: '100%' }}
@@ -52,17 +52,8 @@ const Home: NextPage = () => {
         
        
         {/* Prima icona */}
-        <MediaRenderer
-  src="ipfs://QmTUsqRFU82mby96oYhx3UjgpBdResWZdxf3Yocfu6bwW1/wired-gradient-500-fingerprint-security.gif"  
-  width="64px"
-  height="64px"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
-/>
-        <p className={styles.iconText}>
-          {/* Testo per la prima icona */}
-          ROTATE
-        </p>
+       
+       
       </div>
       
       
