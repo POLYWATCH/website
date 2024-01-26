@@ -121,55 +121,6 @@ const Home: NextPage = () => {
       
      
 
-{/* Spazio tra le sezioni */}
-<div className={styles.sectionSpacer}></div>
-      
-      {/* Horizontal scroll strip */}
-      <div className={styles.imageStrip}>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://QmYBe3KC22CiHmD4eJBCXvNPdiRn7ArPqMJzyXoUmvw5p7/free-polygon-token-4086726-3379856.png" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://QmW1eHz5KboacfeNQ2ykcrdZeqrUQcJ5zuPcQCMwNbkaKW/UKEGFUI.png" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/MKMvdx9H_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/ktlahZTn_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/1v30CL2p_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/IyOkdYI1_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/OwXIH6QD_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/7xBv-QNY_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/sj5nzV_t_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/Ezj3cw3z_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/-IsUmDIW_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/y3h0atRo_400x400.jpg" width="50px" height="50px" />
-        </div>
-        {/* Aggiungi le rimanenti immagini */}
-        {/* Esempio: */}
-        {/* <div className={styles.imageItem}>
-          <MediaRenderer src="Nuovo link" width="50px" height="50px" />
-        </div> */}
-        {/* Continua ad aggiungere le altre immagini */}
-      </div>
-
 
       {/* Seconda sezione */}
       <div className={styles.container}>
@@ -294,6 +245,86 @@ One-by-one
       {/* Spazio tra le sezioni */}
       <div className={styles.sectionSpacer}></div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* Spazio tra le sezioni */}
+<div className={styles.sectionSpacer}></div>
+      
+      {/* Horizontal scroll strip */}
+      <div className={styles.imageStrip}>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmYBe3KC22CiHmD4eJBCXvNPdiRn7ArPqMJzyXoUmvw5p7/free-polygon-token-4086726-3379856.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmW1eHz5KboacfeNQ2ykcrdZeqrUQcJ5zuPcQCMwNbkaKW/UKEGFUI.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/MKMvdx9H_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/ktlahZTn_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/1v30CL2p_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/IyOkdYI1_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/OwXIH6QD_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/7xBv-QNY_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/sj5nzV_t_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/Ezj3cw3z_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/-IsUmDIW_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/y3h0atRo_400x400.jpg" width="50px" height="50px" />
+        </div>
+        {/* Aggiungi le rimanenti immagini */}
+        {/* Esempio: */}
+        {/* <div className={styles.imageItem}>
+          <MediaRenderer src="Nuovo link" width="50px" height="50px" />
+        </div> */}
+        {/* Continua ad aggiungere le altre immagini */}
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       {/* Terza sezione */}
       <div className={styles.container}>
         <div className={styles.content}>
