@@ -265,7 +265,7 @@ const Home: NextPage = () => {
    Get your POLYWATCH earn time and be the best out there. Secure access to the beta test mobile game
    </p>
    <MediaRenderer
-src="ipfs://QmdaL5A4zLXgqQBRFyZij4B5mBUNvRFBT1n1yu5LVhXgFE/PAC-MAN%404-1536x730%20(1).png"  
+src="/images/peie.png"  
 width="60%"
 height="60%"
 style={{ maxWidth: '100%', maxHeight: '100%' }}
