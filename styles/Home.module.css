@@ -179,7 +179,7 @@
   display: flex;
   justify-content: center;
   gap: 80px; /* Raddoppia nuovamente lo spazio tra le immagini */
-  background-color: rgba(252, 177, 2, 0.11);
+  background-color: rgba(164, 2, 252, 0.11);
   padding: 10px;
   width: 100%;
 }
