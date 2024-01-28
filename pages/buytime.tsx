@@ -374,7 +374,7 @@ import Link from "next/link";
 {/* Empty space */}
 <div style={{ height: '40px' }} />
 
- <button onClick={importTokenToMetaMask}>Aggiungi Token a MetaMask</button>
+ 
 
         <p className={styles.heroSubtitle}>
           Price: 1 MATIC = 100 TIME
