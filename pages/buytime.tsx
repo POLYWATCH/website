@@ -390,6 +390,17 @@ import Link from "next/link";
   CLICK HERE TO IMPORT $TIME TO YOUR WALLET
 </Link>
 
+
+<Web3Button
+        theme="dark"
+        contractAddress={tokenAddress}
+        action={(contract) => contract.erc20.claim(1)} // Azione di esempio
+        onSuccess={importTokenToMetaMask}
+        onError={(err) => console.error(err)}
+      >
+        Aggiungi Token a MetaMask
+      </Web3Button>
+        
        
       </div>
     );
