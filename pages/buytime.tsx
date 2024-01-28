@@ -37,7 +37,68 @@ import Link from "next/link";
     });
   
     const claimedSupply = useTokenSupply(contract);
-  
+
+
+
+
+
+
+
+   
+    const tokenSymbol = 'TIME';
+    const tokenDecimals = 18;
+    const tokenImage = 'ipfs://QmfZwP6Br9rY9AdiJrm3BRC91aJJzdLfAoEwfwfya7V64R/time1.png';
+    
+    
+
+    try {
+      // 'wasAdded' is a boolean. Like any RPC method, an error can be thrown.
+      const wasAdded = await window.ethereum.request({
+        method: 'wallet_watchAsset',
+        params: {
+          type: 'ERC20',
+          options: {
+            address: tokenAddress, // The address of the token.
+            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 characters.
+            decimals: tokenDecimals, // The number of decimals in the token.
+            image: tokenImage, // A string URL of the token logo.
+          },
+        },
+      });
+    
+      if (wasAdded) {
+        console.log('Thanks for your interest!');
+      } else {
+        console.log('Your loss!');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     const totalAvailableSupply = useMemo(() => {
       try {
         return BigNumber.from(activeClaimCondition.data?.availableSupply || 0);
