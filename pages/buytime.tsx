@@ -51,30 +51,34 @@ import Link from "next/link";
     
     
 
-    try {
-      // 'wasAdded' is a boolean. Like any RPC method, an error can be thrown.
-      const wasAdded = await window.ethereum.request({
-        method: 'wallet_watchAsset',
-        params: {
-          type: 'ERC20',
-          options: {
-            address: tokenAddress, // The address of the token.
-            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 characters.
-            decimals: tokenDecimals, // The number of decimals in the token.
-            image: tokenImage, // A string URL of the token logo.
+    const importTokenToMetaMask = async () => {
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: tokenSymbol,
+              decimals: tokenDecimals,
+              image: tokenImage,
+            },
           },
-        },
-      });
+        });
     
-      if (wasAdded) {
-        console.log('Thanks for your interest!');
-      } else {
-        console.log('Your loss!');
+        if (wasAdded) {
+          console.log('Token added to MetaMask!');
+        } else {
+          console.log('Unable to add token to MetaMask.');
+        }
+      } catch (error) {
+        console.log('Error while adding token to MetaMask:', error);
       }
-    } catch (error) {
-      console.log(error);
-    }
-
+    };
+    
+    // Chiamata alla funzione asincrona
+    importTokenToMetaMask();
+    
 
 
 
@@ -370,7 +374,7 @@ import Link from "next/link";
 {/* Empty space */}
 <div style={{ height: '40px' }} />
 
-
+ <button onClick={importTokenToMetaMask}>Aggiungi Token a MetaMask</button>
 
         <p className={styles.heroSubtitle}>
           Price: 1 MATIC = 100 TIME
