@@ -391,15 +391,7 @@ import Link from "next/link";
 </Link>
 
 
-<Web3Button
-        theme="dark"
-        contractAddress={tokenAddress}
-        action={(contract) => contract.erc20.claim(1)} // Azione di esempio
-        onSuccess={importTokenToMetaMask}
-        onError={(err) => console.error(err)}
-      >
-        Aggiungi Token a MetaMask
-      </Web3Button>
+
         
        
       </div>
