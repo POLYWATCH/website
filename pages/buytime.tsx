@@ -16,7 +16,7 @@ import {
   import styles from "../styles/TIMEBUY.module.css";
   import { parseIneligibility } from "../utils/parseIneligibility";
 import Link from "next/link";
-import { BigNumber, ethers } from "ethers";
+import { ethers } from "ethers";
 
 
   
