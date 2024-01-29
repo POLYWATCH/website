@@ -190,7 +190,7 @@ const TimePage: NextPage = () => {
         animation: 'glow 1s ease-in-out infinite alternate',
       }}
     >
-      Add TIME To Metamask
+      Add TIME to Metamask
     </button>
 
 
