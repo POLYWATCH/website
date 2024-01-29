@@ -9,7 +9,7 @@ import BalanceCard from "../components/BalanceCard";
 import { TRANSFER_CONTRACT_ADDRESS } from "../const/contractAddresses";
 import TransferCard from "../components/TransferCard";
 import Events from "../components/Events";
-
+import { BigNumber, ethers } from "ethers";
 
 type TokenParams = {
   to: string;
