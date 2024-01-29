@@ -16,7 +16,7 @@ import {
   import styles from "../styles/TIMEBUY.module.css";
   import { parseIneligibility } from "../utils/parseIneligibility";
 import Link from "next/link";
-import { ethers } from "ethers";
+
 
 
   
@@ -54,40 +54,7 @@ import { ethers } from "ethers";
 
 
 
-  async function addTokenFunction() {
-    try {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
   
-      if (provider) {
-        const network = await provider.getNetwork();
-  
-        if (network.chainId === 137) { // Verifica se la rete è Polygon
-          const wasAdded = await provider.send('wallet_watchAsset', {
-            type: 'ERC20',
-            options: {
-              address: '0x40617B73b3115ba887405B503FeF32c98a7dB714',
-              
-              decimals: 18,
-              image: 'https://28ea4813380fdaa4b10448e278a508ab.ipfscdn.io/ipfs/bafybeieryhcntvl6lqomhgrkpyxuoj5usayvxmydgmveaur275abmx35r4/654.png',
-            },
-          } as any); // Usa 'as any' per bypassare temporaneamente l'errore di tipo
-  
-          if (wasAdded) {
-            console.log('Token added to MetaMask on Polygon!');
-          } else {
-            console.log('HelloWorld Coin has not been added on Polygon');
-          }
-        } else {
-          console.log('You are not on the Polygon network. Please switch to Polygon network in MetaMask.');
-        }
-      } else {
-        console.log('MetaMask provider not found.');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
 
 
 
@@ -352,26 +319,7 @@ import { ethers } from "ethers";
 
 
 
-          <button
-      onClick={addTokenFunction}
-      style={{
-        background: 'linear-gradient(45deg, #8e2de2, #4a00e0)',
-        color: '#ffffff',
-        padding: '10px 20px',
-        fontSize: '16px',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-        transition: 'box-shadow 0.3s ease',
-        position: 'relative',
-        overflow: 'hidden',
-        animation: 'glow 1s ease-in-out infinite alternate',
-      }}
-    >
-      Add TIME To MetaMask
-    </button> 
-
+       
 
 
 
