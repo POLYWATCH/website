@@ -410,7 +410,7 @@ One-by-one
 </a>
         <p className={styles.iconText}>
           {/* Testo per la seconda icona */}
-          Evolve your Polywatch
+          Evolve 
         </p>
       </div>
 
