@@ -171,27 +171,29 @@ const TimePage: NextPage = () => {
 
 
 
-
-
-          <button
-      onClick={addTokenFunction}
-      style={{
-        background: 'linear-gradient(45deg, #8e2de2, #4a00e0)',
-        color: '#ffffff',
-        padding: '10px 20px',
-        fontSize: '16px',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-        transition: 'box-shadow 0.3s ease',
-        position: 'relative',
-        overflow: 'hidden',
-        animation: 'glow 1s ease-in-out infinite alternate',
-      }}
-    >
-      Add TIME to Metamask
-    </button>
+<button
+  onClick={() => {
+    // Aggiungi un'interazione utente prima di chiamare addTokenFunction
+    document.body.addEventListener('click', addTokenFunction, { once: true });
+  }}
+  style={{
+    background: 'linear-gradient(45deg, #8e2de2, #4a00e0)',
+    color: '#ffffff',
+    padding: '10px 20px',
+    fontSize: '16px',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+    transition: 'box-shadow 0.3s ease',
+    position: 'relative',
+    overflow: 'hidden',
+    animation: 'glow 1s ease-in-out infinite alternate',
+    width: '100%', // Aggiunto per renderlo a larghezza completa su dispositivi mobili
+  }}
+>
+  Add TIME To MetaMask
+</button>
 
 
 
