@@ -126,8 +126,7 @@
     padding: 16px;
   }
   
-  
-  /* On mobile: */
+ /* On mobile: */
 @media only screen and (max-width: 850px) {
   .claimGrid {
     flex-direction: column;
