@@ -44,40 +44,7 @@ import Link from "next/link";
 
 
 
-   
-    const tokenSymbol = 'TIME';
-    const tokenDecimals = 18;
-    const tokenImage = 'ipfs://QmfZwP6Br9rY9AdiJrm3BRC91aJJzdLfAoEwfwfya7V64R/time1.png';
-    
-    
-
-    const importTokenToMetaMask = async () => {
-      try {
-        const wasAdded = await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: tokenAddress,
-              symbol: tokenSymbol,
-              decimals: tokenDecimals,
-              image: tokenImage,
-            },
-          },
-        });
-    
-        if (wasAdded) {
-          console.log('Token added to MetaMask!');
-        } else {
-          console.log('Unable to add token to MetaMask.');
-        }
-      } catch (error) {
-        console.log('Error while adding token to MetaMask:', error);
-      }
-    };
-    
-    // Chiamata alla funzione asincrona
-    importTokenToMetaMask();
+  
     
 
 
