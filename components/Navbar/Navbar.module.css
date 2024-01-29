@@ -92,3 +92,22 @@
   display: flex !important;
 }
 /* Navbar.module.css */
+
+/* Aggiungi una regola media query per gestire i dispositivi con larghezza massima di 600px (ad esempio, dispositivi mobili) */
+@media (max-width: 600px) {
+  .burgerIcon {
+    padding: 8px; /* Riduci il padding per adattarsi meglio ai dispositivi mobili */
+  }
+
+  .burgerLine {
+    width: 20px; /* Riduci la lunghezza della linea del burger icon su mobile */
+  }
+
+  .navMiddle {
+    top: 60%; /* Modifica la posizione centrale su dispositivi mobili */
+  }
+
+  .link {
+    font-size: 16px; /* Riduci ulteriormente la dimensione del testo su dispositivi mobili */
+  }
+}
