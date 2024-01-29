@@ -10,7 +10,7 @@ import { TRANSFER_CONTRACT_ADDRESS } from "../const/contractAddresses";
 import TransferCard from "../components/TransferCard";
 import Events from "../components/Events";
 import { BigNumber, ethers } from "ethers";
-
+import { useMemo, useState } from "react";
 type TokenParams = {
   to: string;
   amount: number;
