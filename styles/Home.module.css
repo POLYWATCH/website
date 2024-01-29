@@ -692,14 +692,38 @@
     max-height: 540px;
   }
 }
-/* Media Query per dispositivi con larghezza massima di 640px (es. mobile) */
+/* Screens smaller than 640px */
 @media (max-width: 640px) {
-  .container {
-    /* Aggiungi stili specifici per dispositivi mobili qui */
-    min-height: 80vh;
-    min-width: 90vw;
+  .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 
+  .tab,
+  .heroTitle {
+    width: 100%;
+  }
+
+  .gradient {
+    margin-top: 256px;
+  }
+
+  .heroTitle {
+    margin-top: -48px;
+    font-size: 38px;
+  }
+
+  .heroCtaContainer {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .heroAsset {
+    max-height: 270px;
+  }
+
+  .container,
   .container2 {
     /* Aggiungi stili specifici per dispositivi mobili qui */
     min-height: 80vh;
@@ -723,4 +747,20 @@
   }
 
   /* Aggiungi ulteriori stili specifici per dispositivi mobili secondo necessità */
+}
+
+/* Above 640px and less than 960px */
+@media (min-width: 640px) and (max-width: 960px) {
+  .gradient {
+    margin-top: 196px;
+  }
+
+  .heroTitle {
+    margin-top: -32px;
+    font-size: 60px;
+  }
+
+  .heroAsset {
+    max-height: 540px;
+  }
 }
