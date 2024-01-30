@@ -269,10 +269,11 @@ import Link from "next/link";
 
           </>
         )}
-  <MediaRenderer
-                    src="ipfs://QmXECvHfEsK6an8ybg4s96Re4pVsieq4d2oPu4HFtr7fzg/jjkv.png"
-                    style={{ width: "100%", height: "auto", maxWidth: "800px" }}
-                  />     
+ 
+<div>
+        <h1>Showroom</h1>
+        <MediaRenderer src="/images/TIMETOKENUFFICILAE.glb" />
+      </div> 
         <hr className={styles.divider} />
   
         <div className={styles.claimGrid}>
