@@ -271,7 +271,7 @@ import Link from "next/link";
         )}
  
 <div>
-        <h1>Showroom</h1>
+       
         <MediaRenderer src="/images/TIMETOKENUFFICILAE.glb" />
       </div> 
         <hr className={styles.divider} />
