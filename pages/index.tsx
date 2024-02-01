@@ -411,9 +411,9 @@ One-by-one
   alt="Icona 3"
 />
 </a>
-        <p className={styles.iconText}>
+       <p className={styles.iconText}>
           {/* Testo per la seconda icona */}
-          Evolve 
+          Evolve your Polywatch
         </p>
       </div>
 
@@ -430,7 +430,7 @@ One-by-one
 </a>
         <p className={styles.iconText}>
           {/* Testo per la terza icona */}
-          Community 
+          Connect with the community 
         </p>
       </div>
       
@@ -462,6 +462,198 @@ One-by-one
 
 
 
+<>
+{/* Terza sezione */}
+<div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.hero}>
+            <div className={styles.heroBackground}>
+              <div className={styles.heroBackgroundInner}>
+                
+              </div>
+            </div>
+            <div className={styles.heroAssetFrame}></div>
+            <div className={styles.heroBodyContainer}>
+              <div className={styles.heroBody}>
+              <h1 className={styles.heroTitle}>
+              <span className={styles.heroTitleGradient}>
+                           NEW TO WEB3?
+                  </span>
+                  <div style={{ margin: '20px' }}>
+  {/* Content of the first section */}
+</div>
+
+{/* Empty space */}
+<div style={{ height: '20px' }} />
+                 
+                  
+                  <br />
+                </h1>
+                <p className={styles.heroSubtitle}>
+                You are not very familiar with web3? we recommend in any case to delve deeper into the world of web3, 
+                but POLYWATCH gives the possibility to create a decentralized wallet with your own e-mail or social profiles.
+   </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+  {address ? (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}
+    >
+      <ConnectWallet />
+    </div>
+  ) : (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '50%',
+          height: '100vh',
+        }}
+      >
+        <div
+          style={{
+            padding: '0.5rem 1rem',
+          }}
+        >
+          <MediaRenderer
+            src={"/images/LOGOPOLY.png"}
+            height="48px"
+            width="48px"
+          />
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '0.5rem 1rem',
+            borderBottom: '1px solid #EEE',
+            height: '100%',
+          }}
+        >
+          <div
+            style={{
+              minWidth: '80%',
+            }}
+          >
+            <h1>Sign In</h1>
+            <EmailSignIn />
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                height: '2rem',
+                marginBottom: '1rem',
+                color: '#CCC',
+              }}
+            >
+              <hr style={{ width: '45%', borderTop: '1px solid #CCC' }} />
+              <p>or</p>
+              <hr style={{ width: '45%', borderTop: '1px solid #CCC' }} />
+            </div>
+        
+
+
+
+
+
+
+            <SocialLoginButton strategy="google" />
+                
+                <SocialLoginButton strategy="apple" />
+                <SocialLoginButton strategy="facebook" />
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '50%',
+          height: '100vh',
+          backgroundColor: '#EEE',
+          backgroundImage: 'url(/images/NUOVODROP.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+    </div>
+  )}
+</>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -483,6 +675,10 @@ One-by-one
 };
 
 export default Home;
+
+
+
+
 
 
 
