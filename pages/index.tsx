@@ -2,10 +2,11 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 import Link from "next/link";
-import { MediaRenderer } from "@thirdweb-dev/react";
+import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
 
 import { useEffect } from "react";
-
+import EmailSignIn from "../components/EmailLogin";
+import { SocialLoginButton } from "../components/SocialLoginButton";
 
 const Home: NextPage = () => {
   
