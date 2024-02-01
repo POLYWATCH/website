@@ -498,6 +498,9 @@ One-by-one
    </p>
                 
               </div>
+              <span className={styles.heroTitleGradient}>
+                           CREATE A WALLET WITH YOUR E-MAIL . FAST AND EASY
+                  </span>
             </div>
           </div>
         </div>
