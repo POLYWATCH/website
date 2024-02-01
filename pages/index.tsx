@@ -37,7 +37,7 @@ const Home: NextPage = () => {
               <div className={styles.heroBackgroundInner}>
               
               <MediaRenderer
-  src="/images/555.png"  
+  src="/images/egrt.png"  
   width="100%"
   height="100%"
   style={{ maxWidth: '100%', maxHeight: '100%' }}
