@@ -12,6 +12,8 @@ const Home: NextPage = () => {
   
 
 
+  const address = useAddress();
+
   return (
     <>
 
