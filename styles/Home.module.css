@@ -644,6 +644,52 @@
 
 
 
+
+
+
+
+/* Aggiungi regole per il container e i tre riquadri */
+.threeDBoxContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permette il wrapping su più righe */
+  justify-content: space-between; /* Cambia da space-around a space-between per distribuire uniformemente su due colonne */
+}
+
+.threeDBox {
+  box-sizing: border-box;
+  width: 48%; /* Larghezza per ottenere due colonne, con uno spazio di margine tra di esse */
+  flex-basis: calc(48% - 20px); /* Sottrai il margine per gestire lo spazio tra le colonne */
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #fff; /* Aggiungi bordo al riquadro */
+  perspective: 1000px; /* Imposta la prospettiva per l'effetto 3D */
+  transition: background 0.3s ease-in-out; /* Aggiungi transizione per il cambio di sfondo */
+}
+
+.threeDBox:hover {
+  background: linear-gradient(90deg, #8a2be2, #a800e5); /* Viola gradient al passaggio del mouse */
+}
+
+.threeDBox h1, .threeDBox p {
+  transform: translateZ(20px); /* Regola la profondità del testo all'interno del riquadro */
+  color: #fff; /* Testo inizialmente bianco */
+}
+
+.threeDBox:hover h1,
+.threeDBox:hover p {
+  color: #fcfcfc; /* Cambia il colore del testo al passaggio del mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Common styles for screens smaller than 960px */
 @media (max-width: 960px) {
   .statsContainer {
