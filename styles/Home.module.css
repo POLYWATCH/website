@@ -639,128 +639,91 @@
   margin-bottom: 1em;
 }
 
-/* Screens smaller than 750px */
-@media (max-width: 750px) {
-  .tabs {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+
+
+
+
+
+/* Common styles for screens smaller than 960px */
+@media (max-width: 960px) {
+  .statsContainer {
+    grid-template-columns: 1fr; /* Single column layout for stat boxes */
+    gap: 15px; /* Adjust spacing between stat boxes */
+    margin-top: 15px; /* Adjust top margin for stat boxes */
   }
 
-  .tab {
-    width: 100%;
+  .circleContainer {
+    width: 100%; /* Full width for circle container */
+    height: auto; /* Auto height for responsiveness */
+  }
+
+  .circleItem {
+    position: relative; /* Adjust position to be relative */
+    top: 0; /* Reset top position */
+    left: 0; /* Reset left position */
   }
 
   .heroTitle {
-    width: 100%;
-  }
-}
-
-/* Less than 640 px */
-@media (max-width: 640px) {
-  .gradient {
-    margin-top: 256px;
-  }
-
-  .heroTitle {
-    margin-top: -48px;
-    font-size: 38px;
+    margin-top: -32px; /* Adjust margin for hero title */
+    font-size: 24px; /* Adjust font size for hero title */
   }
 
   .heroCtaContainer {
-    flex-direction: column;
-    gap: 0px;
+    flex-direction: column; /* Stack CTA items vertically */
+    gap: 8px; /* Adjust gap between CTA items */
   }
 
   .heroAsset {
-    max-height: 270px;
-  }
-}
-
-/* Above 640 and less than 960 */
-@media (min-width: 640px) and (max-width: 960px) {
-  .gradient {
-    margin-top: 196px;
-  }
-
-  .heroTitle {
-    margin-top: -32px;
-    font-size: 60px;
-  }
-
-  .heroAsset {
-    max-height: 540px;
-  }
-}
-/* Screens smaller than 640px */
-@media (max-width: 640px) {
-  .tabs {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .tab,
-  .heroTitle {
-    width: 100%;
-  }
-
-  .gradient {
-    margin-top: 256px;
-  }
-
-  .heroTitle {
-    margin-top: -48px;
-    font-size: 38px;
-  }
-
-  .heroCtaContainer {
-    flex-direction: column;
-    gap: 0px;
-  }
-
-  .heroAsset {
-    max-height: 270px;
+    max-height: 200px; /* Adjust max height for hero asset */
   }
 
   .container,
   .container2 {
-    /* Aggiungi stili specifici per dispositivi mobili qui */
-    min-height: 80vh;
-    min-width: 90vw;
+    min-height: 80vh; /* Adjust minimum height for containers */
+    min-width: 90vw; /* Adjust minimum width for containers */
+  }
+
+  /* Add more common mobile-specific styles as needed */
+}
+
+/* Styles for screens smaller than 640px */
+@media (max-width: 640px) {
+  .statsContainer {
+    gap: 10px; /* Further reduce spacing between stat boxes */
+    margin-top: 10px; /* Further adjust top margin for stat boxes */
   }
 
   .heroTitle {
-    /* Esempio di regolazione del titolo per dispositivi mobili */
-    font-size: 24px;
+    margin-top: -48px; /* Further adjust margin for hero title */
+    font-size: 20px; /* Further adjust font size for hero title */
   }
 
   .heroCtaContainer {
-    /* Esempio di regolazione del container CTA per dispositivi mobili */
-    flex-direction: column;
-    gap: 8px;
+    gap: 6px; /* Further reduce gap between CTA items */
   }
 
   .heroAsset {
-    /* Esempio di regolazione dell'asset hero per dispositivi mobili */
-    max-height: 200px;
+    max-height: 160px; /* Further adjust max height for hero asset */
   }
 
-  /* Aggiungi ulteriori stili specifici per dispositivi mobili secondo necessità */
+  .container,
+  .container2 {
+    min-height: 70vh; /* Further adjust minimum height for containers */
+  }
+
+  /* Add more specific styles for smaller screens if needed */
 }
 
-/* Above 640px and less than 960px */
-@media (min-width: 640px) and (max-width: 960px) {
-  .gradient {
-    margin-top: 196px;
+@media only screen and (max-width: 768px) {
+  .profileContainer {
+    width: 100%; /* Larghezza al 100% su dispositivi mobili */
   }
 
-  .heroTitle {
-    margin-top: -32px;
-    font-size: 60px;
+  .leftColumn {
+    width: 100%; /* Larghezza al 100% su dispositivi mobili */
   }
 
-  .heroAsset {
-    max-height: 540px;
+  .rightColumn {
+    display: none; /* Nascondi la colonna destra su dispositivi mobili */
   }
 }
