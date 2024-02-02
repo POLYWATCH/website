@@ -44,18 +44,20 @@
 /* Navbar.module.css */
 .navMiddle {
   position: fixed;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 4000px;
-  background-color: #7100bc4f;
-  padding: 20px;
+  width: 105%;
+  max-width: 6000px;
+  height: 100%;
+  max-height: 60%;
+  background-color: #3a0056d9;
+  padding: 100px;
   display: none;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: 40px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -64,6 +66,7 @@
   display: flex !important;
   opacity: 1;
 }
+
 
 .link {
   text-decoration: none;
@@ -93,6 +96,8 @@
 }
 /* Navbar.module.css */
 
+/* Navbar.module.css */
+
 /* Aggiungi una regola media query per gestire i dispositivi con larghezza massima di 600px (ad esempio, dispositivi mobili) */
 @media (max-width: 600px) {
   .burgerIcon {
@@ -104,7 +109,8 @@
   }
 
   .navMiddle {
-    top: 60%; /* Modifica la posizione centrale su dispositivi mobili */
+    top: 38%; /* Modifica la posizione centrale su dispositivi mobili */
+    height: 90%; /* Regola l'altezza su dispositivi mobili */
   }
 
   .link {
