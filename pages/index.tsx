@@ -166,6 +166,7 @@ const Home: NextPage = () => {
                 </h1>
 
 
+<MediaRenderer src="/images/gold12.glb" style={{ width: '200px', height: '200px' }} />
 
 
 
