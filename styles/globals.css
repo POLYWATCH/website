@@ -68,3 +68,23 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Aggiungi una regola media query per dispositivi mobili */
+@media only screen and (max-width: 768px) {
+  body::before {
+    display: none; /* Nascondi la linea animata su dispositivi mobili */
+  }
+
+  body {
+    font-size: 16px; /* Riduci la dimensione del carattere principale su dispositivi mobili */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Riduci la dimensione del carattere per gli elementi h1 su dispositivi mobili */
+  }
+
+  h3 {
+    font-size: 18px; /* Riduci la dimensione del carattere per gli elementi h3 su dispositivi mobili */
+    line-height: 24px; /* Aggiusta l'altezza della linea per gli elementi h3 su dispositivi mobili */
+  }
+}
