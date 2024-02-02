@@ -54,17 +54,24 @@
     color: #fff;
     font-weight: 600;
   }
+  @font-face {
+    font-family: 'ZenDot';
+    src: url('./ZenDots-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   .heroSubtitle {
     max-width: 640px;
     margin: 0 0 40px;
     color: #fff;
-    font-family: 'Pixel Operator', monospace; /* Aggiungi il font Pixel Operator */
+    font-family: 'ZenDot', sans-serif; /* Aggiungi il font Pixel Operator */
     font-size: min(3.8vw, 20px);
     letter-spacing: 0.3px;
     line-height: 140%;
     text-align: center;
     transform: translateY(5px);
   }
+  
   
   .container {
     margin-top: 96px;
