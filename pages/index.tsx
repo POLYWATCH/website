@@ -164,6 +164,40 @@ const Home: NextPage = () => {
                     </Link>
                   </div>
                 </h1>
+
+
+
+
+
+
+
+
+                <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            FIRST 3D WATCH NFT PROJECT 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            POLYGON BLOCKCHAIN
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+           UNIQUE TOKEN ERC-721 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            CRAFTED 1 BY 1
+          </p>
+        </div>
+
+
+
+
+
+                
                 <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
