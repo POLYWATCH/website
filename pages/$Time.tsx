@@ -234,7 +234,7 @@ const TimePage: NextPage = () => {
 {/* Empty space */}
 <div style={{ height: '10px' }} />
         <p className={styles.heroSubtitle}>
-          MAX SUPPLY 30 MILION</p>
+          MAX SUPPLY 100 MILION</p>
        
           
         <p className={styles.heroSubtitle}>
