@@ -7,6 +7,7 @@ import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
 import { useEffect } from "react";
 import EmailSignIn from "../components/EmailLogin";
 import { SocialLoginButton } from "../components/SocialLoginButton";
+import Spline from '@splinetool/react-spline';
 
 const Home: NextPage = () => {
   
@@ -517,6 +518,12 @@ One-by-one
               <span className={styles.heroTitleGradient}>
                            NEW TO WEB3?
                   </span>
+
+                <Spline scene="https://prod.spline.design/VYZQkKWDW06PKHS7/scene.splinecode" />
+
+
+
+
                   <div style={{ margin: '20px' }}>
   {/* Content of the first section */}
 </div>
