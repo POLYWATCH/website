@@ -10,15 +10,16 @@ import {
     useTokenSupply,
     Web3Button,
   } from "@thirdweb-dev/react";
-  import { BigNumber, utils } from "ethers";
+  import { BigNumber, ethers, utils } from "ethers";
   import Image from "next/image";
   import { useMemo, useState } from "react";
   import styles from "../styles/TIMEBUY.module.css";
   import { parseIneligibility } from "../utils/parseIneligibility";
 import Link from "next/link";
+import { animated, interpolate, useSpring } from "react-spring";
 
   
-  const Home = () => {
+  const Home = async () => {
     const tokenAddress = "0x40617B73b3115ba887405B503FeF32c98a7dB714";
     const { contract } = useContract(tokenAddress, "token-drop");
     const address = useAddress();
@@ -35,6 +36,49 @@ import Link from "next/link";
       quantity,
       walletAddress: address || "",
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
     const claimedSupply = useTokenSupply(contract);
   
@@ -205,6 +249,35 @@ import Link from "next/link";
       priceToMint,
       quantity,
     ]);
+
+
+
+
+
+
+
+
+
+    const [isAnimationVisible, setAnimationVisible] = useState(false);
+
+    const animationProps = useSpring({
+      opacity: isAnimationVisible ? 1 : 0,
+      backgroundColor: isAnimationVisible ? 'rgba(255, 215, 0, 0.5)' : 'transparent', // Colore oro con trasparenza
+      boxShadow: isAnimationVisible ? '0 0 10px rgba(255, 215, 0, 0.8)' : 'none', // Effetto ombra
+      onRest: () => setAnimationVisible(false),
+      config: { duration: 300 }, // Regola la durata dell'animazione
+    });
+  
+    const handleSuccess = () => {
+      setAnimationVisible(true);
+      // Altre azioni in caso di successo
+      alert('Claimed!');
+    };
+
+
+
+
+
   
     return (
       <div className={styles.container}>
@@ -227,12 +300,12 @@ import Link from "next/link";
           <p>Loading...</p>
         ) : (
           <>
-            
-            <h2 className={styles.title}>BUY $TIME AND JOIN THE MOVEMENT</h2>
-            <p className={styles.explain}>
-              Claim for FREE if you are a past owner
-              <span className={styles.pink}></span>
-            </p>
+
+<h2 className={styles.title} style={{ textAlign: 'center' }}>
+  <div>BUY $TIME</div>
+  <div>JOIN THE MOVEMENT</div>
+</h2>
+
           </>
         )}
   <MediaRenderer
@@ -259,8 +332,7 @@ import Link from "next/link";
             className={`${styles.textInput} ${styles.noGapBottom}`}
           />
                  
-                
-          <Web3Button
+                 <Web3Button
             theme="dark"
             contractAddress={tokenAddress}
             action={(contract) => contract.erc20.claim(quantity)}
@@ -269,12 +341,12 @@ import Link from "next/link";
           >
             {buttonText}
           </Web3Button>
+
           <div>
 
 
 
     </div>
-
 
 
    
@@ -291,12 +363,20 @@ import Link from "next/link";
       {claimedSupply.isLoading && <p>Caricamento...</p>}
       {claimedSupply.isError && <p>Errore nel caricamento dei dati.</p>}
       {claimedSupply.data && (
-        <>
+       <>
           
-          <p> TOTAL TIME COLLECTED: {claimedSupply.data.displayValue}</p>
-        </>
+          <>
+  <p style={{ color: 'gold' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue}</p>
+</>
+
+     </>
       )}
     </div>
+    <p className={styles.heroSubtitle}>
+    IF ELIGIBLE TYPE 1000000 TO SEE HOW MANY TIME YOU CAN CLAIM
+          <br />
+          
+        </p>
 
     <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
@@ -307,15 +387,28 @@ import Link from "next/link";
 
 
 
-        <p className={styles.heroSubtitle}>
-          Price: 1 MATIC = 100 tIME
-          <br />
-          Every 500,000 TIME tokens minted increases the price by 20%.
-        </p>
+<p className={styles.heroSubtitle}>
+  <span style={{ color: 'gold' }}>Price: 1 MATIC = 100 tIME</span>
+  <br />
+  Every 500,000 TIME tokens minted increases the price by 20%.
+</p>
+
         
-        <Link className={styles.heroCta} href="https://polygonscan.com/address/0x40617B73b3115ba887405B503FeF32c98a7dB714">
-                      CLICK HERE TO IMPORT $TIME TO YOUR WALLET
-                    </Link>
+        <Link
+  className={styles.heroCta}
+  href="https://polygonscan.com/address/0x40617B73b3115ba887405B503FeF32c98a7dB714"
+  style={{ color: 'gold' }}
+>
+  CLICK HERE TO IMPORT $TIME TO YOUR WALLET
+</Link>
+
+
+
+
+
+
+
+
        
       </div>
     );

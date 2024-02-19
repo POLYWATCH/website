@@ -2,12 +2,14 @@ import { Card, Flex, Heading, Spinner, Stack, Text } from "@chakra-ui/react";
 import { useAddress, useContract, useContractEvents, useContractMetadata, useTokenBalance } from "@thirdweb-dev/react";
 
 type Props = {
-    tokenAddress: string;
+    tokenAddress: "0x40617B73b3115ba887405B503FeF32c98a7dB714";
 };
+
+
 
 export default function BalanceCard({ tokenAddress }: Props) {
     const address = useAddress();
-
+    
     const {
         contract
     } = useContract(tokenAddress);

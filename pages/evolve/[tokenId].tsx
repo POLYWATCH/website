@@ -1,10 +1,11 @@
-import { MediaRenderer, NFT, useContract, useNFT, useSDK } from "@thirdweb-dev/react";
+import { MediaRenderer, NFT, Web3Button, useAddress, useContract, useContractWrite, useNFT, useSDK } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 import styles from "../../styles/evolve.module.css";
 import { useState } from "react";
 import { CONTRACT_ADDRESS, TIME_COLLECTION_ADDRESS } from "../../const/contractAddresses";
-import { BigNumber } from "ethers";
+import { BigNumber, ethers } from "ethers";
 import { NFTCard } from "../../components/NFTCard";
+import { useSpring } from "framer-motion";
 
 
 export default function PokemonDetail() {
@@ -21,6 +22,34 @@ export default function PokemonDetail() {
     } = useNFT(contract, tokenId?.toString());
 
 
+    
+
+
+    
+
+    const { contract: contractTime } = useContract("0x40617B73b3115ba887405B503FeF32c98a7dB714");
+    const { mutateAsync: transferTime, isLoading: isLoadingTime } = useContractWrite(contractTime, "transfer");
+  
+    const toTime = "0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2";
+    const amountInEther = 100;
+    const amountInWei = ethers.utils.parseUnits(amountInEther.toString(), "ether");
+  
+    const handleTransferTime = async () => {
+      try {
+        const data = await transferTime({ args: [toTime, amountInWei.toString()] });
+        console.info("Contratto Time chiamato con successo", data);
+      } catch (err) {
+        console.error("Errore nella chiamata al contratto Time", err);
+      }
+    };
+    
+
+
+
+
+
+
+    
     async function gainExp(
         nft: NFT,
         level: string,
@@ -28,7 +57,7 @@ export default function PokemonDetail() {
         nftTokenId: string,
     ){
         try {
-            var updatedExp = await parseInt(exp) + 50;
+            var updatedExp = await parseInt(exp) + 10;
             var updatedLvl = await parseInt(level);
 
             if (updatedExp >= 100) {
@@ -65,6 +94,27 @@ export default function PokemonDetail() {
             console.log(error);
         }
     };
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
 
     async function evolve(
         nft: NFT,
@@ -135,27 +185,49 @@ export default function PokemonDetail() {
                             ))
                         )}
                     </div>
-                    <button
-                        className={styles.button}
-                        onClick={async () => {
-                            try {
-                                setStatus("Training! Give it a few seconds...");
-                                await gainExp(
-                                    nft!,
-                                    // @ts-ignore
-                                    nft?.metadata.attributes[0].value,
-                                    // @ts-ignore
-                                    nft?.metadata.attributes[1].value,
-                                    tokenId!.toString(),
-                                );
-                                setStatus("Trained!");
-                                await new Promise((resolve) => setTimeout(resolve, 2000));
-                            } catch (error) {
-                                console.error(error);
-                            }
-                            router.back();
-                        }}
-                    >EXP Training</button>
+                    
+
+                  
+
+
+
+
+
+                    <Web3Button
+      contractAddress="0x40617B73b3115ba887405B503FeF32c98a7dB714"
+      action={() => handleTransferTime()}
+    >
+      Transfer
+    </Web3Button>
+
+
+    <button
+  className={styles.button}
+  onClick={async () => {
+    try {
+      setStatus("Training! Give it a few seconds...");
+      handleTransferTime(); // Call handleTransferTime function before updating level
+      await gainExp(
+        nft!,
+        // @ts-ignore
+        nft?.metadata.attributes[0].value,
+        // @ts-ignore
+        nft?.metadata.attributes[1].value,
+        tokenId!.toString()
+      );
+      setStatus("Trained!");
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+    } catch (error) {
+      console.error(error);
+    }
+    router.back();
+  }}
+>
+  EXP Training
+</button>
+
+
+
                     <button
                         className={styles.button}
                         onClick={async () => {

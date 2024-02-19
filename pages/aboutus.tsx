@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../styles/Home.module.css"; // Make sure you have your CSS file for styling
 import { MediaRenderer } from "@thirdweb-dev/react"; // Assuming you have this component
 import { Navbar } from "../components/Navbar/Navbar";
+import Spline from "@splinetool/react-spline";
 
 
 
@@ -10,7 +11,8 @@ import { Navbar } from "../components/Navbar/Navbar";
 // Your component
 const AboutUs: React.FC = () => {
   return (
-    
+   
+
     <div className={styles.container}>
       <Navbar />
       {/* Use MediaRenderer for the looping video background */}
@@ -20,6 +22,22 @@ const AboutUs: React.FC = () => {
 
 {/* Empty space */}
 <div style={{ height: '100px' }} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -103,9 +121,11 @@ const AboutUs: React.FC = () => {
         <strong>Our Mission</strong>
       </p>
       <p className={styles.heroSubtitle}>
-        The goal of PolyWatch is to become the go-to place for blockchain and
-        watch lovers, making PolyWatch NFTs not only unique assets but also
-        investment opportunities akin to real watches.
+      PolyWatch's primary goal is to transform NFT watches into genuine luxury assets and investment opportunities akin to traditional timepieces. We are committed to providing cutting-edge products and services, positioning PolyWatch as the go-to destination for watch and blockchain enthusiasts.
+
+Transparency is our cornerstone value: we want every step of our process to be visible and understandable to our community. User security is at the forefront of our operations, and we are dedicated to promptly addressing any issues that may arise.
+
+We take pride in being Italian and carrying forward the tradition of excellence in design and innovation. With PolyWatch, we are polishing dreams and creating unique investment opportunities. Join us on this adventure, where every detail matters, and every step is part of an extraordinary journey.
       </p>
       
       

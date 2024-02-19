@@ -54,11 +54,17 @@
     color: #fff;
     font-weight: 600;
   }
+  @font-face {
+    font-family: 'ZenDot';
+    src: url('./ZenDots-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   .heroSubtitle {
     max-width: 640px;
     margin: 0 0 40px;
     color: #fff;
-    font-family: 'Pixel Operator', monospace; /* Aggiungi il font Pixel Operator */
+    font-family: 'ZenDot', sans-serif; /* Aggiungi il font Pixel Operator */
     font-size: min(3.8vw, 20px);
     letter-spacing: 0.3px;
     line-height: 140%;
@@ -125,9 +131,7 @@
     width: 100%;
     padding: 16px;
   }
-  
-  
-  /* On mobile: */
+  /* Common styles for screens smaller than 850px */
 @media only screen and (max-width: 850px) {
   .claimGrid {
     flex-direction: column;
@@ -138,12 +142,28 @@
   .textInput {
     margin-top: 6px;
     margin-bottom: 8px;
-    width: 100%; /* Occupa tutta la larghezza disponibile */
+    width: 100%; /* Occupy the entire available width */
   }
 
   .mainButton {
-    width: 100%; /* Occupa tutta la larghezza disponibile */
+    width: 100%; /* Occupy the entire available width */
   }
 
-  /* Aggiungi ulteriori regole per adattare il layout su dispositivi mobili secondo necessità */
+  /* Add additional rules to adapt the layout on mobile devices as needed */
+}
+
+@keyframes illuminate {
+  0% {
+    background-color: #ffffff; /* Initial color */
+  }
+  50% {
+    background-color: #ffff00; /* Color at the middle of the animation */
+  }
+  100% {
+    background-color: #ffffff; /* Final color */
+  }
+}
+
+.illuminate-success {
+  animation: illuminate 1s ease; /* Duration and easing function of the animation */
 }

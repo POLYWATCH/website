@@ -2,183 +2,100 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 import Link from "next/link";
-import { MediaRenderer } from "@thirdweb-dev/react";
+import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
 
-import { useEffect } from "react";
 
+import { CSSProperties, useEffect, useState } from "react";
+import EmailSignIn from "../components/EmailLogin";
+import { SocialLoginButton } from "../components/SocialLoginButton";
+import ClipLoader from "react-spinners/ClipLoader";
+import DotLoader from "react-spinners/DotLoader";
+
+import Spline from '@splinetool/react-spline';
 
 const Home: NextPage = () => {
-  
+  const override: CSSProperties = {
+    display: "block",
+    margin: "0 auto",
+    borderColor: "red",
+  };
+  const address = useAddress();
 
+
+  
+  
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("#000000");
 
   return (
     <>
 
 
-
-
-
-
-
-
+<Spline scene="https://prod.spline.design/1YbqWrHPBmGG0m8c/scene.splinecode" />
 
 
       {/* Prima sezione */}
-      <div className={styles.container}>
-        <div className={styles.videoBackground}>
-          {/* Aggiungi qui il componente LoopingVideo o MediaRenderer per il tuo video */}
-        </div>
-        <div className={styles.content}>
-          <div className={styles.hero}>
-            <div className={styles.heroBackground}>
-              <div className={styles.heroBackgroundInner}>
-              
-              <MediaRenderer
-  src="ipfs://QmUSabGiiQX2Bpdq16WAG8WVpF8NLcAwypGmuVDG8pCuUF/plexus_-_27669%20(1440p).mp4"  
-  width="100%"
-  height="100%"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
-/>
-
-       
-          
+     
+      
+      
+      <p className={styles.heroSubtitle}>
                 
-              </div>
-
-
-
-              <div className={styles.iconContainer}>
-        
-       
-        {/* Prima icona */}
-        <MediaRenderer
-  src="ipfs://QmTUsqRFU82mby96oYhx3UjgpBdResWZdxf3Yocfu6bwW1/wired-gradient-500-fingerprint-security.gif"  
-  width="64px"
-  height="64px"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
-/>
-        <p className={styles.iconText}>
-          {/* Testo per la prima icona */}
-          ROTATE
-        </p>
-      </div>
-      
-      
-         
-            </div>
+                <Link
+                  className={styles.link}
+                  href=""
+                  target="_blank"
+                >
+                  Explore and collect your exclusive watch NFTs now. Jump aboard and start your journey with POLYWATCH!
+                </Link>{" "}
+               
+              </p>
+            
             <div style={{ margin: '100px' }}>
   {/* Content of the first section */}
 </div>
 
 {/* Empty space */}
 <div style={{ height: '100px' }} />
-            <div className={styles.heroAssetFrame}></div>
-            <div className={styles.heroBodyContainer}>
-              <div className={styles.heroBody}>
-                <h1 className={styles.heroTitle}>
+            
+            
                   
                   
 
 
-                
-                  <MediaRenderer src="ipfs://QmRXPh2WhoWByjkTm4GiXd81XeipryxrMojkNRrCAocpPF/LOGO%20POLY.png"/>
-                  <br />
-                  <span className={styles.heroTitleGradient}>
-                    POLYWATCH   
-                  </span>
-                </h1>
-                <p className={styles.heroSubtitle}>
-                
-                  <Link
-                    className={styles.link}
-                    href=""
-                    target="_blank"
-                  >
-                    Explore and collect your exclusive watch NFTs now. Jump aboard and start your journey with POLYWATCH!
-                  </Link>{" "}
-                 
-                </p>
-                
-                
-              </div>
-            </div>
 
-          </div>
+
+
+
+
+
+      
+               
+                
+                
+              
+            
+            
           
-          <MediaRenderer
-  src="ipfs://QmUWnAv2s2hVsrsMWcjv7frnU7PsvgUsmVjMW7FVJ9x8GP/screen-rotate.png"  
-  width="64px"
-  height="64px"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
-/>
 
 
 
-        <p className={styles.iconText}>
-          {/* Testo per la prima icona */}
-         MOBILE
-        </p>
-        </div>
+       
+       
         <div className={styles.heroCtaContainer}>
         
               
                 </div>
-      </div>
+      
       
      
 
-{/* Spazio tra le sezioni */}
-<div className={styles.sectionSpacer}></div>
-      
-      {/* Horizontal scroll strip */}
-      <div className={styles.imageStrip}>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://QmYBe3KC22CiHmD4eJBCXvNPdiRn7ArPqMJzyXoUmvw5p7/free-polygon-token-4086726-3379856.png" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://QmW1eHz5KboacfeNQ2ykcrdZeqrUQcJ5zuPcQCMwNbkaKW/UKEGFUI.png" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/MKMvdx9H_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/ktlahZTn_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/1v30CL2p_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/IyOkdYI1_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/OwXIH6QD_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/7xBv-QNY_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/sj5nzV_t_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/Ezj3cw3z_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/-IsUmDIW_400x400.jpg" width="50px" height="50px" />
-        </div>
-        <div className={styles.imageItem}>
-          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/y3h0atRo_400x400.jpg" width="50px" height="50px" />
-        </div>
-        {/* Aggiungi le rimanenti immagini */}
-        {/* Esempio: */}
-        {/* <div className={styles.imageItem}>
-          <MediaRenderer src="Nuovo link" width="50px" height="50px" />
-        </div> */}
-        {/* Continua ad aggiungere le altre immagini */}
-      </div>
 
+
+
+
+
+
+      
 
       {/* Seconda sezione */}
       <div className={styles.container}>
@@ -219,6 +136,46 @@ const Home: NextPage = () => {
                     </Link>
                   </div>
                 </h1>
+
+
+                <MediaRenderer src="/images/GOLD12.glb" style={{ width: '200px', height: '200px' }} />
+
+
+
+                <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            FIRST 3D WATCH NFT PROJECT 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            POLYGON BLOCKCHAIN
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+           UNIQUE TOKEN ERC-721 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            CRAFTED 1 BY 1
+          </p>
+        </div>
+
+
+
+
+
+
+        <a href="/evolve/evolve">
+  <MediaRenderer src="/images/untverse.glb" style={{ width: '200px', height: '200px' }} />
+</a>
+
+
+
+
+
                 <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
@@ -265,7 +222,7 @@ const Home: NextPage = () => {
    Get your POLYWATCH earn time and be the best out there. Secure access to the beta test mobile game
    </p>
    <MediaRenderer
-src="ipfs://QmdaL5A4zLXgqQBRFyZij4B5mBUNvRFBT1n1yu5LVhXgFE/PAC-MAN%404-1536x730%20(1).png"  
+src="/images/peie.png"  
 width="60%"
 height="60%"
 style={{ maxWidth: '100%', maxHeight: '100%' }}
@@ -289,11 +246,15 @@ One-by-one
    </p>
   
   
-
+   <div style={{ display: 'flex', gap: '16px' }}>
+  <MediaRenderer src="/images/SEIKO2.glb" style={{ width: '200px', height: '200px' }} />
+  <MediaRenderer src="/images/SEIKO2.glb" style={{ width: '200px', height: '200px' }} />
+  <MediaRenderer src="/images/SEIKO2.glb" style={{ width: '200px', height: '200px' }} />
+</div>
 
 
       </div>
-
+      
       <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
@@ -302,6 +263,91 @@ One-by-one
 <div style={{ height: '40px' }} />
       {/* Spazio tra le sezioni */}
       <div className={styles.sectionSpacer}></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+     
+   
+   
+{/* Spazio tra le sezioni */}
+<div className={styles.sectionSpacer}></div>
+
+      {/* Horizontal scroll strip */}
+      <div className={styles.imageStrip}>
+      
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmYBe3KC22CiHmD4eJBCXvNPdiRn7ArPqMJzyXoUmvw5p7/free-polygon-token-4086726-3379856.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmW1eHz5KboacfeNQ2ykcrdZeqrUQcJ5zuPcQCMwNbkaKW/UKEGFUI.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/MKMvdx9H_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/ktlahZTn_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/1v30CL2p_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/IyOkdYI1_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/OwXIH6QD_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/7xBv-QNY_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/sj5nzV_t_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/Ezj3cw3z_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/-IsUmDIW_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/y3h0atRo_400x400.jpg" width="50px" height="50px" />
+        </div>
+        {/* Aggiungi le rimanenti immagini */}
+        {/* Esempio: */}
+        {/* <div className={styles.imageItem}>
+          <MediaRenderer src="Nuovo link" width="50px" height="50px" />
+        </div> */}
+        {/* Continua ad aggiungere le altre immagini */}
+      </div>
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
 
       {/* Terza sezione */}
       <div className={styles.container}>
@@ -318,6 +364,11 @@ One-by-one
                   className={styles.gradient}
                 />
               </div>
+
+             
+
+
+
             </div>
             <div className={styles.heroAssetFrame}></div>
             <div className={styles.heroBodyContainer}>
@@ -437,6 +488,203 @@ One-by-one
 
 
 
+<>
+{/* Terza sezione */}
+<div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.hero}>
+            <div className={styles.heroBackground}>
+              <div className={styles.heroBackgroundInner}>
+                
+              </div>
+            </div>
+            <div className={styles.heroAssetFrame}></div>
+            <div className={styles.heroBodyContainer}>
+              <div className={styles.heroBody}>
+              <h1 className={styles.heroTitle}>
+              <span className={styles.heroTitleGradient}>
+                           NEW TO WEB3?
+                  </span>
+
+
+
+
+
+
+                  <Spline scene="https://prod.spline.design/VYZQkKWDW06PKHS7/scene.splinecode" />
+
+
+
+
+
+
+                  <div style={{ margin: '20px' }}>
+  {/* Content of the first section */}
+</div>
+
+{/* Empty space */}
+<div style={{ height: '20px' }} />
+                 
+                  
+                  <br />
+                </h1>
+                <p className={styles.heroSubtitle}>
+                You are not very familiar with web3? we recommend in any case to delve deeper into the world of web3, 
+                but POLYWATCH gives the possibility to create a decentralized wallet with your own e-mail or social profiles.
+   </p>
+                
+              </div>
+              <span className={styles.heroTitleGradient}>
+                           CREATE A WALLET WITH YOUR E-MAIL . FAST AND EASY
+                  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {address ? (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}
+    >
+      <ConnectWallet />
+    </div>
+  ) : (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '50%',
+          height: '100vh',
+        }}
+      >
+        <div
+          style={{
+            padding: '0.5rem 1rem',
+          }}
+        >
+          <MediaRenderer
+            src={"/images/LOGOPOLY.png"}
+            height="48px"
+            width="48px"
+          />
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '0.5rem 1rem',
+            borderBottom: '1px solid #EEE',
+            height: '100%',
+          }}
+        >
+          <div
+            style={{
+              minWidth: '80%',
+            }}
+          >
+            <h1>Sign In</h1>
+            <EmailSignIn />
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%',
+                height: '2rem',
+                marginBottom: '1rem',
+                color: '#CCC',
+              }}
+            >
+              <hr style={{ width: '45%', borderTop: '1px solid #CCC' }} />
+              <p>or</p>
+              <hr style={{ width: '45%', borderTop: '1px solid #CCC' }} />
+            </div>
+        
+
+
+
+
+
+
+            <SocialLoginButton strategy="google" />
+                
+                <SocialLoginButton strategy="apple" />
+                <SocialLoginButton strategy="facebook" />
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '50%',
+          height: '100vh',
+          backgroundColor: '#EEE',
+          backgroundImage: 'url(/images/NUOVODROP.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+    </div>
+  )}
+</>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -458,7 +706,3 @@ One-by-one
 };
 
 export default Home;
-
-
-
-
