@@ -72,6 +72,7 @@
     transform: translateY(5px);
   }
   
+  
   .container {
     margin-top: 96px;
     display: flex;
@@ -131,7 +132,12 @@
     width: 100%;
     padding: 16px;
   }
+<<<<<<< HEAD
   /* Common styles for screens smaller than 850px */
+=======
+  
+ /* On mobile: */
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 @media only screen and (max-width: 850px) {
   .claimGrid {
     flex-direction: column;

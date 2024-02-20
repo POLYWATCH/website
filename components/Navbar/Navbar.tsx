@@ -46,9 +46,12 @@ export function Navbar() {
           <Link href="/evolve/evolve" className={styles.link}>
             Evolve
           </Link>
+<<<<<<< HEAD
           <Link href="/watches" className={styles.link}>
             Watches
           </Link>
+=======
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
           <Link href="/aboutus" className={styles.link}>
             About Us
           </Link>

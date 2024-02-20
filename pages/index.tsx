@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
 
+<<<<<<< HEAD
 
 import { CSSProperties, useEffect, useState } from "react";
 import EmailSignIn from "../components/EmailLogin";
@@ -11,6 +12,11 @@ import { SocialLoginButton } from "../components/SocialLoginButton";
 import ClipLoader from "react-spinners/ClipLoader";
 import DotLoader from "react-spinners/DotLoader";
 
+=======
+import { useEffect } from "react";
+import EmailSignIn from "../components/EmailLogin";
+import { SocialLoginButton } from "../components/SocialLoginButton";
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 import Spline from '@splinetool/react-spline';
 
 const Home: NextPage = () => {
@@ -22,10 +28,14 @@ const Home: NextPage = () => {
   const address = useAddress();
 
 
+<<<<<<< HEAD
   
   
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#000000");
+=======
+  const address = useAddress();
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 
   return (
     <>
@@ -35,6 +45,7 @@ const Home: NextPage = () => {
 
 
       {/* Prima sezione */}
+<<<<<<< HEAD
      
       
       
@@ -50,6 +61,43 @@ const Home: NextPage = () => {
                
               </p>
             
+=======
+      <div className={styles.container}>
+        <div className={styles.videoBackground}>
+          {/* Aggiungi qui il componente LoopingVideo o MediaRenderer per il tuo video */}
+        </div>
+        <div className={styles.content}>
+          <div className={styles.hero}>
+            <div className={styles.heroBackground}>
+              <div className={styles.heroBackgroundInner}>
+              
+              <MediaRenderer
+  src="/images/egrt.png"  
+  width="100%"
+  height="100%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+  alt="Icona 3"
+/>
+
+       
+          
+                
+              </div>
+
+
+
+              <div className={styles.iconContainer}>
+        
+       
+        {/* Prima icona */}
+       
+       
+      </div>
+      
+      
+         
+            </div>
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
             <div style={{ margin: '100px' }}>
   {/* Content of the first section */}
 </div>
@@ -89,6 +137,7 @@ const Home: NextPage = () => {
       
      
 
+<<<<<<< HEAD
 
 
 
@@ -206,6 +255,112 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+=======
+
+      {/* Seconda sezione */}
+      <div className={styles.container}>
+        <div className={styles.content}>
+          <div className={styles.hero}>
+            <div className={styles.heroBackground}>
+              <div className={styles.heroBackgroundInner}>
+                <Image
+                  src="/hero-gradient.png"
+                  width={1390}
+                  height={1390}
+                  alt="Background gradient from black to purple"
+                  quality={100}
+                  className={styles.gradient}
+                />
+              </div>
+            </div>
+            <div className={styles.heroAssetFrame}></div>
+            <div className={styles.heroBodyContainer}>
+              <div className={styles.heroBody}>
+                <h1 className={styles.heroTitle}>
+                  <span className={styles.heroTitleGradient}>
+                    P0WERED BY<br />
+                    <span className={styles.subTitle}>
+                      $TIME
+                    </span>
+                  </span>
+                  <div className={styles.container2}>
+                    <MediaRenderer
+                      src="ipfs://QmSQrEP7i2xfiyp1RVfNqRgYSN6awhnGozdxGpySGVxsAC/4455.gif"
+                    />
+                    <br />
+                    <span className={styles.heroSubtitle}>
+                      The TIME token is the governance token for P0LYWATCH. It s an ERC20 token available on POLYGON mainnet.
+                    </span>
+                    <Link className={styles.heroCta} href="$Time">
+                      ACCESS
+                    </Link>
+                  </div>
+                </h1>
+
+
+<MediaRenderer src="/images/gold12.glb" style={{ width: '200px', height: '200px' }} />
+
+
+
+
+
+
+                <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            FIRST 3D WATCH NFT PROJECT 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            POLYGON BLOCKCHAIN
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+           UNIQUE TOKEN ERC-721 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            CRAFTED 1 BY 1
+          </p>
+        </div>
+
+
+
+
+
+                
+                <div style={{ margin: '40px' }}>
+  {/* Content of the first section */}
+</div>
+
+{/* Empty space */}
+<div style={{ height: '40px' }} />
+                <span className={styles.heroTitle}>
+                      Are you a past owner of $TIME & POLYWATCH ? 
+                    </span>
+                    <span className={styles.heroSubtitle}>
+                    Claim in full security your $TIME & POLYWATCH .
+                    </span>
+                    <Link className={styles.heroCta} href="/buytime">
+                      CLAIM $TIME
+                    </Link>
+                    <Link className={styles.heroCta} href="/claim">
+                      CLAIM POLYWATCH
+                    </Link>
+
+                <p className={styles.heroSubtitle}>
+                
+                </p>
+
+                <div className={styles.heroCtaContainer}>
+                  {/* Aggiungi collegamenti o bottoni qui */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
 
@@ -214,6 +369,129 @@ const Home: NextPage = () => {
 
 
 
+        <p className={styles.heroSubtitle}>
+     
+     <strong>JOIN THE REVOLUTION</strong>
+   </p>
+   <p className={styles.heroSubtitle}>
+   Get your POLYWATCH earn time and be the best out there. Secure access to the beta test mobile game
+   </p>
+   <MediaRenderer
+src="/images/peie.png"  
+width="60%"
+height="60%"
+style={{ maxWidth: '100%', maxHeight: '100%' }}
+alt="Icona 3"
+/> 
+<div style={{ margin: '40px' }}>
+  {/* Content of the first section */}
+</div>
+
+{/* Empty space */}
+<div style={{ height: '40px' }} />
+<span className={styles.heroTitleGradient}>
+One-by-one
+                  </span>
+   
+   
+   <p className={styles.heroSubtitle}>
+   Each Polywatch is meticulously crafted, ONE BY ONE, to ensure unparalleled authenticity. 
+   These NFTs aren t just digital watches; they are true digital art pieces. With distinct straps, faces, and hands, every Polywatch is a statement of uniqueness.
+  Beyond its functional value, each timepiece represents an irreplicable digital artwork, emphasizing our commitment to originality and excellence
+   </p>
+  
+  
+
+<div >
+  <MediaRenderer src="/images/SEIKO2.glb" />
+</div>
+
+
+      </div>
+
+      <div style={{ margin: '40px' }}>
+  {/* Content of the first section */}
+</div>
+
+{/* Empty space */}
+<div style={{ height: '40px' }} />
+      {/* Spazio tra le sezioni */}
+      <div className={styles.sectionSpacer}></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* Spazio tra le sezioni */}
+<div className={styles.sectionSpacer}></div>
+      
+      {/* Horizontal scroll strip */}
+      <div className={styles.imageStrip}>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmYBe3KC22CiHmD4eJBCXvNPdiRn7ArPqMJzyXoUmvw5p7/free-polygon-token-4086726-3379856.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmW1eHz5KboacfeNQ2ykcrdZeqrUQcJ5zuPcQCMwNbkaKW/UKEGFUI.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/MKMvdx9H_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/ktlahZTn_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/1v30CL2p_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/IyOkdYI1_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/OwXIH6QD_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/7xBv-QNY_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/sj5nzV_t_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/Ezj3cw3z_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/-IsUmDIW_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/y3h0atRo_400x400.jpg" width="50px" height="50px" />
+        </div>
+        {/* Aggiungi le rimanenti immagini */}
+        {/* Esempio: */}
+        {/* <div className={styles.imageItem}>
+          <MediaRenderer src="Nuovo link" width="50px" height="50px" />
+        </div> */}
+        {/* Continua ad aggiungere le altre immagini */}
+      </div>
+
+
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
+
+
+
+
+
+
+
+
+<<<<<<< HEAD
         <p className={styles.heroSubtitle}>
      
      <strong>JOIN THE REVOLUTION</strong>
@@ -258,13 +536,16 @@ One-by-one
       <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
-
-{/* Empty space */}
-<div style={{ height: '40px' }} />
-      {/* Spazio tra le sezioni */}
-      <div className={styles.sectionSpacer}></div>
+=======
 
 
+
+
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
+
+
+
+<<<<<<< HEAD
 
 
 
@@ -349,6 +630,9 @@ One-by-one
 
 
 
+=======
+      
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
       {/* Terza sezione */}
       <div className={styles.container}>
         <div className={styles.content}>
@@ -437,7 +721,7 @@ One-by-one
   alt="Icona 3"
 />
 </a>
-        <p className={styles.iconText}>
+       <p className={styles.iconText}>
           {/* Testo per la seconda icona */}
           Evolve your Polywatch
         </p>
@@ -506,6 +790,7 @@ One-by-one
                            NEW TO WEB3?
                   </span>
 
+<<<<<<< HEAD
 
 
 
@@ -514,6 +799,9 @@ One-by-one
                   <Spline scene="https://prod.spline.design/VYZQkKWDW06PKHS7/scene.splinecode" />
 
 
+=======
+                <Spline scene="https://prod.spline.design/VYZQkKWDW06PKHS7/scene.splinecode" />
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 
 
 
@@ -554,7 +842,22 @@ One-by-one
 
 
 
+<<<<<<< HEAD
       {address ? (
+=======
+
+
+
+
+
+
+
+
+
+
+      
+  {address ? (
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
     <div
       style={{
         display: 'flex',
@@ -705,4 +1008,16 @@ One-by-one
   );
 };
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home;
+
+
+
+
+
+
+
+
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e

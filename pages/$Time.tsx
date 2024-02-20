@@ -9,10 +9,15 @@ import BalanceCard from "../components/BalanceCard";
 import { TRANSFER_CONTRACT_ADDRESS } from "../const/contractAddresses";
 import TransferCard from "../components/TransferCard";
 import Events from "../components/Events";
+<<<<<<< HEAD
 import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 
 
+=======
+import { BigNumber, ethers } from "ethers";
+import { useMemo, useState } from "react";
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 type TokenParams = {
   to: string;
   amount: number;
@@ -180,6 +185,55 @@ const TimePage: NextPage = () => {
 
 
 
+
+
+
+
+  async function addTokenFunction() {
+    try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+  
+      if (provider) {
+        const network = await provider.getNetwork();
+  
+        if (network.chainId === 137) { // Verifica se la rete è Polygon
+          const wasAdded = await provider.send('wallet_watchAsset', {
+            type: 'ERC20',
+            options: {
+              address: '0x40617B73b3115ba887405B503FeF32c98a7dB714',
+              
+              decimals: 18,
+              image: 'https://28ea4813380fdaa4b10448e278a508ab.ipfscdn.io/ipfs/bafybeieryhcntvl6lqomhgrkpyxuoj5usayvxmydgmveaur275abmx35r4/654.png',
+            },
+          } as any); // Usa 'as any' per bypassare temporaneamente l'errore di tipo
+  
+          if (wasAdded) {
+            console.log('Token added to MetaMask on Polygon!');
+          } else {
+            console.log('HelloWorld Coin has not been added on Polygon');
+          }
+        } else {
+          console.log('You are not on the Polygon network. Please switch to Polygon network in MetaMask.');
+        }
+      } else {
+        console.log('MetaMask provider not found.');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+
+
+
+
+
+
+  
+
+
   return (
     <>
       {/* Prima sezione con la GIF */}
@@ -219,9 +273,13 @@ const TimePage: NextPage = () => {
 
 
 
+<<<<<<< HEAD
 
        
           <button
+=======
+<button
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
   onClick={() => {
     // Aggiungi un'interazione utente prima di chiamare addTokenFunction
     document.body.addEventListener('click', addTokenFunction, { once: true });
@@ -248,11 +306,15 @@ const TimePage: NextPage = () => {
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+          
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
         </div>
       </div>
 
@@ -288,7 +350,7 @@ const TimePage: NextPage = () => {
 {/* Empty space */}
 <div style={{ height: '10px' }} />
         <p className={styles.heroSubtitle}>
-          MAX SUPPLY 30 MILION</p>
+          MAX SUPPLY 100 MILION</p>
        
           
         <p className={styles.heroSubtitle}>
@@ -389,6 +451,7 @@ const TimePage: NextPage = () => {
       
             
 
+<<<<<<< HEAD
 
 
 
@@ -422,6 +485,8 @@ const TimePage: NextPage = () => {
 
 
     
+=======
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 
            
       

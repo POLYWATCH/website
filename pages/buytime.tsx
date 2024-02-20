@@ -18,6 +18,8 @@ import {
 import Link from "next/link";
 import { animated, interpolate, useSpring } from "react-spring";
 
+
+
   
   const Home = async () => {
     const tokenAddress = "0x40617B73b3115ba887405B503FeF32c98a7dB714";
@@ -81,7 +83,39 @@ import { animated, interpolate, useSpring } from "react-spring";
 
   
     const claimedSupply = useTokenSupply(contract);
+
+
+
+
+
+
+
   
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     const totalAvailableSupply = useMemo(() => {
       try {
         return BigNumber.from(activeClaimCondition.data?.availableSupply || 0);
@@ -300,18 +334,24 @@ import { animated, interpolate, useSpring } from "react-spring";
           <p>Loading...</p>
         ) : (
           <>
+<<<<<<< HEAD
 
 <h2 className={styles.title} style={{ textAlign: 'center' }}>
+=======
+            
+           <h2 className={styles.title} style={{ textAlign: 'center' }}>
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
   <div>BUY $TIME</div>
   <div>JOIN THE MOVEMENT</div>
 </h2>
 
           </>
         )}
-  <MediaRenderer
-                    src="ipfs://QmXECvHfEsK6an8ybg4s96Re4pVsieq4d2oPu4HFtr7fzg/jjkv.png"
-                    style={{ width: "100%", height: "auto", maxWidth: "800px" }}
-                  />     
+ 
+<div>
+       
+        <MediaRenderer src="/images/TIMETOKENUFFICILAE.glb" />
+      </div> 
         <hr className={styles.divider} />
   
         <div className={styles.claimGrid}>
@@ -357,6 +397,15 @@ import { animated, interpolate, useSpring } from "react-spring";
 
 
 
+       
+
+
+
+
+
+        
+
+
 
 
         <div>
@@ -365,6 +414,7 @@ import { animated, interpolate, useSpring } from "react-spring";
       {claimedSupply.data && (
        <>
           
+<<<<<<< HEAD
           <>
   <p style={{ color: 'gold' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue}</p>
 </>
@@ -378,6 +428,17 @@ import { animated, interpolate, useSpring } from "react-spring";
           
         </p>
 
+=======
+         <p style={{ color: 'gold' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue}</p>
+        </>
+      )}
+    </div>
+ <p className={styles.heroSubtitle}>
+         IF ELIGIBLE TYPE 1000000 TO SEE HOW MANY $TIME YOU CAN CLAIM
+          <br />
+          
+        </p>
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
     <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
@@ -385,8 +446,9 @@ import { animated, interpolate, useSpring } from "react-spring";
 {/* Empty space */}
 <div style={{ height: '40px' }} />
 
+ 
 
-
+<<<<<<< HEAD
 <p className={styles.heroSubtitle}>
   <span style={{ color: 'gold' }}>Price: 1 MATIC = 100 tIME</span>
   <br />
@@ -395,6 +457,15 @@ import { animated, interpolate, useSpring } from "react-spring";
 
         
         <Link
+=======
+        <p className={styles.heroSubtitle}>
+          Price: 1 MATIC = 100 TIME
+          <br />
+          Every 500,000 TIME tokens minted increases the price by 20%.
+        </p>
+        
+       <Link
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
   className={styles.heroCta}
   href="https://polygonscan.com/address/0x40617B73b3115ba887405B503FeF32c98a7dB714"
   style={{ color: 'gold' }}
@@ -404,11 +475,15 @@ import { animated, interpolate, useSpring } from "react-spring";
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+        
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
        
       </div>
     );

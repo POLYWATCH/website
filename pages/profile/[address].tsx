@@ -23,7 +23,11 @@ import randomColor from "../../util/randomColor";
 import TransferCard from "../../components/TransferCard";
 import { Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
 import BalanceCard from "../../components/BalanceCard";
+<<<<<<< HEAD
 
+=======
+import Events from "../../components/Events";
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 
 
 
@@ -116,7 +120,11 @@ const {
     });
   
 
+<<<<<<< HEAD
   return (
+=======
+   return (
+>>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
     <Container maxWidth="lg">
     
     <div className={styles.profileHeader}>
