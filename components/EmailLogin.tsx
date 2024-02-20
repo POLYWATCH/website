@@ -110,8 +110,4 @@ export default function EmailSignIn() {
             >Sign In</button>
         </>
     );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e

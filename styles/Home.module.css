@@ -662,10 +662,6 @@
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 /* Aggiungi regole per il container e i tre riquadri */
 .threeDBoxContainer {
   display: flex;
@@ -708,14 +704,11 @@
 
 
 
-<<<<<<< HEAD
 
 
 
 
 
-=======
->>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 /* Common styles for screens smaller than 960px */
 @media (max-width: 960px) {
   .statsContainer {
@@ -784,23 +777,6 @@
   }
 
   /* Add more specific styles for smaller screens if needed */
-<<<<<<< HEAD
-=======
-}
-
-@media only screen and (max-width: 768px) {
-  .profileContainer {
-    width: 100%; /* Larghezza al 100% su dispositivi mobili */
-  }
-
-  .leftColumn {
-    width: 100%; /* Larghezza al 100% su dispositivi mobili */
-  }
-
-  .rightColumn {
-    display: none; /* Nascondi la colonna destra su dispositivi mobili */
-  }
->>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 }
 
 @media only screen and (max-width: 768px) {

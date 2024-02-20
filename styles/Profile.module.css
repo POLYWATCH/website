@@ -59,7 +59,6 @@
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -68,8 +67,6 @@
 
 
 
-=======
->>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
 @keyframes waveAnimation {
   0% {
     background-position: 0% 50%;
@@ -118,7 +115,6 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Aggiungi un overlay con gradienti */
 }
 
-<<<<<<< HEAD
 /* Existing styles */
 
 /* ... (unchanged) ... */
@@ -197,5 +193,3 @@
 }
 
 /* Add more styles if necessary */
-=======
->>>>>>> 43b5e525dc783fe9df05e5635b20a44a1918026e
