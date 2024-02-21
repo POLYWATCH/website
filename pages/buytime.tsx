@@ -20,7 +20,7 @@ import {  useSpring } from "react-spring";
 
 
   
-  const Home = async () => {
+  const BuyTime = async () => {
     const tokenAddress = "0x40617B73b3115ba887405B503FeF32c98a7dB714";
     const { contract } = useContract(tokenAddress, "token-drop");
     const address = useAddress();
@@ -457,4 +457,31 @@ import {  useSpring } from "react-spring";
     );
   };
   
-  export default Home;
+  export default BuyTime;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
