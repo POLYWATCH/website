@@ -121,11 +121,11 @@ const AboutUs: React.FC = () => {
         <strong>Our Mission</strong>
       </p>
       <p className={styles.heroSubtitle}>
-      PolyWatch's primary goal is to transform NFT watches into genuine luxury assets and investment opportunities akin to traditional timepieces. We are committed to providing cutting-edge products and services, positioning PolyWatch as the go-to destination for watch and blockchain enthusiasts.
+      PolyWatch s primary goal is to transform NFT watches into genuine luxury assets and investment opportunities akin to traditional timepieces. We are committed to providing cutting-edge products and services, positioning PolyWatch as the go-to destination for watch and blockchain enthusiasts.
 
 Transparency is our cornerstone value: we want every step of our process to be visible and understandable to our community. User security is at the forefront of our operations, and we are dedicated to promptly addressing any issues that may arise.
 
-We take pride in being Italian and carrying forward the tradition of excellence in design and innovation. With PolyWatch, we are polishing dreams and creating unique investment opportunities. Join us on this adventure, where every detail matters, and every step is part of an extraordinary journey.
+We take pride in being Italian and carrying forward the tradition of excellence in design and innovation. With PolyWatch we are polishing dreams and creating unique investment opportunities. Join us on this adventure, where every detail matters, and every step is part of an extraordinary journey.
       </p>
       
       
