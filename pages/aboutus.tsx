@@ -66,7 +66,7 @@ const AboutUs: React.FC = () => {
       <p className={styles.heroSubtitle}>
         PolyWatch is more than just an NFT project; it s a project dedicated
         to watch enthusiasts and blockchain lovers. We are here to offer you an
-        exclusive collection of PolyWatch NFTs, each meticulously crafted with
+        exclusive collection of NFTs, each meticulously crafted with
         care and precision.
       </p>
 
