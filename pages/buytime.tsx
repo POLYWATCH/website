@@ -10,13 +10,12 @@ import {
     useTokenSupply,
     Web3Button,
   } from "@thirdweb-dev/react";
-  import { BigNumber, ethers, utils } from "ethers";
-  import Image from "next/image";
+  import { BigNumber, utils } from "ethers";
   import { useMemo, useState } from "react";
   import styles from "../styles/TIMEBUY.module.css";
   import { parseIneligibility } from "../utils/parseIneligibility";
 import Link from "next/link";
-import { animated, interpolate, useSpring } from "react-spring";
+import {  useSpring } from "react-spring";
 
 
 
