@@ -38,17 +38,7 @@ const Home: NextPage = () => {
      
       
       
-      <p className={styles.heroSubtitle}>
-                
-                <Link
-                  className={styles.link}
-                  href=""
-                  target="_blank"
-                >
-                  Explore and collect your exclusive watch NFTs now. Jump aboard and start your journey with POLYWATCH!
-                </Link>{" "}
-               
-              </p>
+     
             
             <div style={{ margin: '100px' }}>
   {/* Content of the first section */}
@@ -141,6 +131,11 @@ const Home: NextPage = () => {
                 <MediaRenderer src="/images/GOLD12.glb" style={{ width: '200px', height: '200px' }} />
 
 
+<p style={{ textAlign: 'center' }}>
+  <div className={styles.heroSubtitle}>
+    Explore and collect your exclusive watch NFTs now. Jump aboard and start your journey with POLYWATCH!
+  </div>
+</p>
 
                 <div className={styles.threeDBox}>
           <p className={styles.heroSubtitle}>
