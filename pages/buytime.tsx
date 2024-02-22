@@ -1,93 +1,51 @@
+import React, { useEffect, useMemo, useState } from "react";
 import {
   MediaRenderer,
-    useActiveClaimConditionForWallet,
-    useAddress,
-    useClaimConditions,
-    useClaimerProofs,
-    useClaimIneligibilityReasons,
-    useContract,
-    useContractMetadata,
-    useTokenSupply,
-    Web3Button,
-  } from "@thirdweb-dev/react";
-  import { BigNumber, utils } from "ethers";
-  import { useMemo, useState } from "react";
-  import styles from "../styles/TIMEBUY.module.css";
-  import { parseIneligibility } from "../utils/parseIneligibility";
+  useActiveClaimConditionForWallet,
+  useAddress,
+  useClaimConditions,
+  useClaimerProofs,
+  useClaimIneligibilityReasons,
+  useContract,
+  useContractMetadata,
+  useTokenSupply,
+  Web3Button,
+} from "@thirdweb-dev/react";
+import { BigNumber, utils } from "ethers";
+import styles from "../styles/TIMEBUY.module.css";
+import { parseIneligibility } from "../utils/parseIneligibility";
 import Link from "next/link";
-import {  useSpring } from "react-spring";
+import { useSpring } from "react-spring";
 
+const BuyTime = () => {
+  const tokenAddress = "0x40617B73b3115ba887405B503FeF32c98a7dB714";
+  const { contract, isLoading: contractLoading } = useContract(
+    tokenAddress,
+    "token-drop"
+  );
+  const address = useAddress();
+  const [quantity, setQuantity] = useState(1);
+  const { data: contractMetadata } = useContractMetadata(contract);
 
+  const claimConditions = useClaimConditions(contract);
+  const activeClaimCondition = useActiveClaimConditionForWallet(
+    contract,
+    address
+  );
+  const claimerProofs = useClaimerProofs(contract, address || "");
+  const claimIneligibilityReasons = useClaimIneligibilityReasons(contract, {
+    quantity,
+    walletAddress: address || "",
+  });
+  const claimedSupply = useTokenSupply(contract);
 
-  
-  const BuyTime = async () => {
-    const tokenAddress = "0x40617B73b3115ba887405B503FeF32c98a7dB714";
-    const { contract } = useContract(tokenAddress, "token-drop");
-    const address = useAddress();
-    const [quantity, setQuantity] = useState(1);
-    const { data: contractMetadata } = useContractMetadata(contract);
-  
-    const claimConditions = useClaimConditions(contract);
-    const activeClaimCondition = useActiveClaimConditionForWallet(
-      contract,
-      address
-    );
-    const claimerProofs = useClaimerProofs(contract, address || "");
-    const claimIneligibilityReasons = useClaimIneligibilityReasons(contract, {
-      quantity,
-      walletAddress: address || "",
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    const claimedSupply = useTokenSupply(contract);
-
-
-
-
-
-
+  const totalAvailableSupply = useMemo(() => {
+    try {
+      return BigNumber.from(activeClaimCondition.data?.availableSupply || 0);
+    } catch {
+      return BigNumber.from(1_000_000_000);
+    }
+  }, [activeClaimCondition.data?.availableSupply]);
 
   
     
@@ -107,22 +65,13 @@ import {  useSpring } from "react-spring";
 
 
 
-
-
+ 
 
 
 
 
 
     
-    const totalAvailableSupply = useMemo(() => {
-      try {
-        return BigNumber.from(activeClaimCondition.data?.availableSupply || 0);
-      } catch {
-        return BigNumber.from(1_000_000_000);
-      }
-    }, [activeClaimCondition.data?.availableSupply]);
-  
     const numberClaimed = useMemo(() => {
       return BigNumber.from(claimedSupply.data?.value || 0).toString();
     }, [claimedSupply]);
@@ -291,24 +240,6 @@ import {  useSpring } from "react-spring";
 
 
 
-    const [isAnimationVisible, setAnimationVisible] = useState(false);
-
-    const animationProps = useSpring({
-      opacity: isAnimationVisible ? 1 : 0,
-      backgroundColor: isAnimationVisible ? 'rgba(255, 215, 0, 0.5)' : 'transparent', // Colore oro con trasparenza
-      boxShadow: isAnimationVisible ? '0 0 10px rgba(255, 215, 0, 0.8)' : 'none', // Effetto ombra
-      onRest: () => setAnimationVisible(false),
-      config: { duration: 300 }, // Regola la durata dell'animazione
-    });
-  
-    const handleSuccess = () => {
-      setAnimationVisible(true);
-      // Altre azioni in caso di successo
-      alert('Claimed!');
-    };
-
-
-
 
 
   
@@ -458,6 +389,8 @@ import {  useSpring } from "react-spring";
   };
   
   export default BuyTime;
+
+
 
 
 
