@@ -1,0 +1,69 @@
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.listing {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.listing .title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.listing .delete-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.confirmation {
+  margin-top: 10px;
+}
+
+.confirmation .message {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.confirmation .confirm-button {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.web3-button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.web3-button:hover {
+  background-color: #0056b3;
+}
+
+.web3-button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}

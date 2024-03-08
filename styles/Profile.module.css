@@ -1,0 +1,195 @@
+.profilePicture {
+  width: 132px;
+  height: 132px;
+  border-radius: 132px;
+  vertical-align: inherit;
+  outline: 3px solid rgba(255, 255, 255, 0.1);
+  margin-top: -72px;
+  margin-left: 5%;
+}
+
+.profileName {
+  margin-left: 2.5%;
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: color 0.1s ease-in-out;
+}
+
+.tab:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.activeTab {
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 2px solid #0294fe;
+  color: #0294fe;
+}
+
+.tabContent {
+  display: none;
+  height: 0px;
+  opacity: 0;
+  transition: all 0.1s linear;
+}
+
+.activeTabContent {
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  width: 140%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.profileHeader {
+  position: relative;
+  overflow: hidden;
+  
+}
+
+
+.coverImage {
+  width: 100%;
+  height: 200px; /* Altezza del tuo elemento copertina, aggiustala a seconda delle tue esigenze */
+  background: linear-gradient(90deg, #8a2be2, #ff00ff); /* Viola gradient */
+  background-size: 200% 200%;
+  animation: waveAnimation 5s linear infinite, scaleAnimation 10s linear infinite; /* Modifica la durata e lo stile dell'animazione a tuo piacimento */
+  filter: blur(5px); /* Aggiungi effetto di sfocatura */
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Aggiungi un overlay con gradienti */
+}
+
+/* Existing styles */
+
+/* ... (unchanged) ... */
+
+/* New styles for the specified module */
+
+/* On mobile: */
+@media only screen and (max-width: 850px) {
+  .profileHeader {
+    height: auto; /* Adjust height for responsiveness */
+  }
+
+  .coverImage {
+    height: 200px; /* Reset height for responsiveness */
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically on mobile */
+    align-items: center; /* Center tabs on mobile */
+    gap: 16px; /* Adjust spacing between tabs on mobile */
+  }
+
+  .tab {
+    width: 100%; /* Full width for tabs on mobile */
+  }
+
+  .tabContent {
+    width: 100%; /* Full width for tab content on mobile */
+  }
+
+  /* Add more mobile-specific styles as needed */
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.profileHeader {
+  position: relative;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, #8a2be2, #ff00ff);
+  background-size: 200% 200%;
+  animation: waveAnimation 5s linear infinite, scaleAnimation 10s linear infinite;
+  filter: blur(5px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+/* Add more styles if necessary */

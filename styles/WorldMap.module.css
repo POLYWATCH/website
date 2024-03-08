@@ -1,0 +1,21 @@
+.worldMap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .bigSquare {
+    position: relative;
+    width: 200px; /* Modifica la larghezza del quadrato grande */
+    height: 200px; /* Modifica l'altezza del quadrato grande */
+    background-color: #D6D6DA; /* Colore di riempimento del quadrato grande */
+  }
+  
+  .smallSquare {
+    position: absolute;
+    width: 20px; /* Modifica la larghezza del quadrato piccolo */
+    height: 20px; /* Modifica l'altezza del quadrato piccolo */
+    background-color: #888; /* Colore di riempimento dei quadrati piccoli */
+  }
+  
