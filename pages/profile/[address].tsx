@@ -23,7 +23,10 @@ import randomColor from "../../util/randomColor";
 import TransferCard from "../../components/TransferCard";
 import { Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
 import BalanceCard from "../../components/BalanceCard";
+<<<<<<< HEAD
 import Chart from "../../components/Chart";
+=======
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 
@@ -205,7 +208,11 @@ const {
   </div>
 </div>
 
+<<<<<<< HEAD
 <Chart />
+=======
+
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 <SimpleGrid columns={3} spacing={4} mt={4} width="100%" margin="auto">

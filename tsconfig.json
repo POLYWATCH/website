@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 {
   "compilerOptions": {
     "target": "es5",
@@ -15,7 +20,11 @@
     "jsx": "preserve",
     "incremental": true
   },
+<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/box.js"],
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   "exclude": ["node_modules"]
 }
 

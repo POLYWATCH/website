@@ -8,10 +8,16 @@ import { Flex, Avatar, Heading, SimpleGrid, Spinner,Text, Container } from "@cha
 import BalanceCard from "../components/BalanceCard";
 import { TRANSFER_CONTRACT_ADDRESS } from "../const/contractAddresses";
 import TransferCard from "../components/TransferCard";
+<<<<<<< HEAD
 
 import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
+=======
+import Events from "../components/Events";
+import { useMemo, useState } from "react";
+import { BigNumber, ethers } from "ethers";
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 type TokenParams = {
@@ -210,7 +216,11 @@ const TimePage: NextPage = () => {
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
                   <MediaRenderer
+<<<<<<< HEAD
                     src="./images/TIME11.png"
+=======
+                    src="ipfs://QmWPdszhCpzdi7DWw8ngyzN3Gi3xdC6UjPKFA8Utq8V1BB/ljkk%C3%B2n.gif"
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
                     style={{ width: "100%", height: "auto", maxWidth: "600px" }}
                     className={styles.gifImage}
                   />
@@ -344,8 +354,38 @@ const TimePage: NextPage = () => {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+{/* Four boxes with numbers and labels */}
+<div className={styles.statsContainer}>
+
+  {/* Box 1 - Max Supply */}
+  <div className={styles.statBox}>
+    <div className={styles.statNumber}>MAX SUPPLY: 30M</div>
+  </div>
+
+  {/* Box 2 - Current Supply */}
+  <div className={styles.statBox}>
+    <div>
+      {claimedSupply.isLoading && <p>Caricamento...</p>}
+      {claimedSupply.isError && <p>Errore nel caricamento dei dati.</p>}
+      {claimedSupply.data && (
+        <div className={styles.statNumber}>
+          {claimedSupply.isLoading ? (
+            <p>Caricamento...</p>
+          ) : (
+            <p style={{ color: 'white' }}>CURRENT SUPPLY: {claimedSupply.data.displayValue}</p>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+
+
+</div>
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 
@@ -389,7 +429,14 @@ const TimePage: NextPage = () => {
 {/* Empty space */}
 <div style={{ height: '40px' }} />
         <div className={styles.timeGraph}>
+<<<<<<< HEAD
          
+=======
+          <MediaRenderer
+            src="ipfs://QmZGkhgPvfdAPVx3t2MVE6LSVXMhDkGorFAdzwNZ9ZP92m/5U4U.png"
+            style={{ width: "100%", height: "auto", maxWidth: "800px" }}  // Adjust the maxWidth as needed
+          />
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
         </div>
 
 
@@ -409,7 +456,10 @@ const TimePage: NextPage = () => {
 
     
 
+<<<<<<< HEAD
         <FAQ />
+=======
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
            
       
     </>

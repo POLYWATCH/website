@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ConnectWallet, MediaRenderer, useAddress } from "@thirdweb-dev/react";
 
 
+<<<<<<< HEAD
 import { CSSProperties, StrictMode, useEffect, useRef, useState } from "react";
 import EmailSignIn from "../components/EmailLogin";
 import { SocialLoginButton } from "../components/SocialLoginButton";
@@ -18,18 +19,37 @@ import { useMotionValueEvent, useScroll } from "framer-motion"
 import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } from "@chakra-ui/react";
 
   const Home: NextPage = () => {
+=======
+import { CSSProperties, useEffect, useState } from "react";
+import EmailSignIn from "../components/EmailLogin";
+import { SocialLoginButton } from "../components/SocialLoginButton";
+import ClipLoader from "react-spinners/ClipLoader";
+import DotLoader from "react-spinners/DotLoader";
+
+import Spline from '@splinetool/react-spline';
+
+const Home: NextPage = () => {
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   const override: CSSProperties = {
     display: "block",
     margin: "0 auto",
     borderColor: "red",
+<<<<<<< HEAD
   }
   const address = useAddress();
 
+=======
+  };
+  const address = useAddress();
+
+
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   
   
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#000000");
 
+<<<<<<< HEAD
   const carouselRef = useRef(null)
   const { scrollX } = useScroll({
     container: carouselRef
@@ -76,10 +96,18 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
   
 
 
+=======
+  return (
+    <>
+
+
+<Spline scene="https://prod.spline.design/1YbqWrHPBmGG0m8c/scene.splinecode" />
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
       {/* Prima sezione */}
      
+<<<<<<< HEAD
        
 
       
@@ -87,6 +115,18 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
 
      
 
+=======
+      
+      
+     
+            
+            <div style={{ margin: '100px' }}>
+  {/* Content of the first section */}
+</div>
+
+{/* Empty space */}
+<div style={{ height: '100px' }} />
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
             
             
                   
@@ -98,6 +138,10 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
       
                
                 
@@ -155,7 +199,11 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
                   </span>
                   <div className={styles.container2}>
                     <MediaRenderer
+<<<<<<< HEAD
                       src="/images/TIME11.png"
+=======
+                      src="ipfs://QmSQrEP7i2xfiyp1RVfNqRgYSN6awhnGozdxGpySGVxsAC/4455.gif"
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
                     />
                     <br />
                     <span className={styles.heroSubtitle}>
@@ -168,21 +216,61 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
                 </h1>
 
 
+<<<<<<< HEAD
                 <MediaRenderer src="/images/GRANDE3.glb" style={{ width: '200px', height: '200px' }} />
 
 
                 <p style={{ textAlign: 'center' }}>
+=======
+                <MediaRenderer src="/images/GOLD12.glb" style={{ width: '200px', height: '200px' }} />
+
+
+<p style={{ textAlign: 'center' }}>
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   <div className={styles.heroSubtitle}>
     Explore and collect your exclusive watch NFTs now. Jump aboard and start your journey with POLYWATCH!
   </div>
 </p>
 
+<<<<<<< HEAD
         <Highlights />
 
 
         <Link href="/evolve/evolve">
   
   
+=======
+                <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            FIRST 3D WATCH NFT PROJECT 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            POLYGON BLOCKCHAIN
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+           UNIQUE TOKEN ERC-721 
+          </p>
+        </div>
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+            CRAFTED 1 BY 1
+          </p>
+        </div>
+
+
+
+
+
+
+        <Link href="/evolve/evolve">
+  <a>
+    <MediaRenderer src="/images/untverse.glb" style={{ width: '200px', height: '200px' }} />
+  </a>
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 </Link>
 
 
@@ -222,8 +310,15 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
 
 
 
+<<<<<<< HEAD
         
         
+=======
+
+
+
+
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
         <p className={styles.heroSubtitle}>
      
@@ -256,8 +351,18 @@ One-by-one
   Beyond its functional value, each timepiece represents an irreplicable digital artwork, emphasizing our commitment to originality and excellence
    </p>
   
+<<<<<<< HEAD
    <Features />
   
+=======
+  
+   <div style={{ display: 'flex', gap: '16px' }}>
+  <MediaRenderer src="/images/SEIKO2.glb" style={{ width: '200px', height: '200px' }} />
+  <MediaRenderer src="/images/SEIKO2.glb" style={{ width: '200px', height: '200px' }} />
+  <MediaRenderer src="/images/SEIKO2.glb" style={{ width: '200px', height: '200px' }} />
+</div>
+
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
       </div>
       
@@ -280,7 +385,72 @@ One-by-one
 
 
 
+<<<<<<< HEAD
 
+=======
+      
+     
+   
+   
+{/* Spazio tra le sezioni */}
+<div className={styles.sectionSpacer}></div>
+
+      {/* Horizontal scroll strip */}
+      <div className={styles.imageStrip}>
+      
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmYBe3KC22CiHmD4eJBCXvNPdiRn7ArPqMJzyXoUmvw5p7/free-polygon-token-4086726-3379856.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://QmW1eHz5KboacfeNQ2ykcrdZeqrUQcJ5zuPcQCMwNbkaKW/UKEGFUI.png" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/MKMvdx9H_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/ktlahZTn_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/1v30CL2p_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/IyOkdYI1_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/OwXIH6QD_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/7xBv-QNY_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/sj5nzV_t_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/Ezj3cw3z_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/-IsUmDIW_400x400.jpg" width="50px" height="50px" />
+        </div>
+        <div className={styles.imageItem}>
+          <MediaRenderer src="ipfs://Qmdr1Sucz9DePq82fhBUfR6kYizZD68pei1f9tSXrhKEb6/y3h0atRo_400x400.jpg" width="50px" height="50px" />
+        </div>
+        {/* Aggiungi le rimanenti immagini */}
+        {/* Esempio: */}
+        {/* <div className={styles.imageItem}>
+          <MediaRenderer src="Nuovo link" width="50px" height="50px" />
+        </div> */}
+        {/* Continua ad aggiungere le altre immagini */}
+      </div>
+
+
+
+
+
+
+
+
+      
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 
@@ -326,15 +496,31 @@ One-by-one
 {/* Empty space */}
 <div style={{ height: '40px' }} />
                   <MediaRenderer
+<<<<<<< HEAD
                     src="/images/reward11.png"
                     style={{ width: "120%", height: "auto", maxWidth: "680px" }}
+=======
+                    src="ipfs://QmdbvqhcQSFosNupe5X1k3m1ba5PxdpeDVkmqiaQDxgJg7/IHP.gif"
+                    style={{ width: "100%", height: "auto", maxWidth: "600px" }}
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
                     className={styles.gifImage}
                   />
                   <br />
                 </h1>
+<<<<<<< HEAD
                 
                 </div>
                 </div>
+=======
+                <span className={styles.heroSubtitle}>
+                  {/* Aggiungi il testo della sottotitolo se necessario */}
+                </span>
+                <div className={styles.heroCtaContainer}>
+                  {/* Aggiungi collegamenti o bottoni qui */}
+                </div>
+              </div>
+            </div>
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
           </div>
         </div>
       </div>
@@ -347,7 +533,11 @@ One-by-one
     <div className={styles.iconsSection}>
       <div className={styles.iconContainer}>
         {/* Prima icona */}
+<<<<<<< HEAD
         <a href="/mint" target="_blank" rel="noopener noreferrer">
+=======
+        <a href="/rewards" target="_blank" rel="noopener noreferrer">
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   <MediaRenderer
     src="ipfs://QmWNn6FAvrfhkg8X4JU9h8knGABtV34XKiAZZzy4G15QHa/wired-gradient-1300-enter-key.gif"  
     width="64px"
@@ -606,6 +796,7 @@ One-by-one
 </>
 
 
+<<<<<<< HEAD
 {/* Spazio tra le sezioni */}
 
 
@@ -653,6 +844,8 @@ One-by-one
         
       
       
+=======
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 
@@ -663,6 +856,7 @@ One-by-one
 
 
 
+<<<<<<< HEAD
   
 
       {/* Horizontal scroll strip */}
@@ -713,16 +907,21 @@ One-by-one
         </div> */}
         {/* Continua ad aggiungere le altre immagini */}
       </div>
+=======
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 
 
 
 
+<<<<<<< HEAD
 <FAQ />
 
 
 
+=======
+>>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 
