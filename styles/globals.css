@@ -13,16 +13,9 @@ html {
   color-scheme: dark;
 }
 
-<<<<<<< HEAD
 body {
   color: #fefafa;
   background: linear-gradient(to top, #000000, #270238, #000000, #270238, #000000);
-=======
-
-body {
-  color: #fefafa;
-  background: #0c0c0c;
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   --color-primary: #fada3f;
   --color-secondary: #7b0595;
   --color-tertiary: #6f029e;
@@ -33,10 +26,6 @@ body {
   position: relative;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 body::before {
   content: '';
   position: absolute;
@@ -101,14 +90,10 @@ a {
 
 
 
-<<<<<<< HEAD
 svg {
   display: inline-block;
   vertical-align: middle;
 }
-=======
-
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 iframe {
   width: 100%;

@@ -1,5 +1,4 @@
 // Import necessary modules and components
-<<<<<<< HEAD
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css"; // Make sure you have your CSS file for styling
 import { MediaRenderer, Web3Button, useAddress, useContract, useContractWrite } from "@thirdweb-dev/react"; // Assuming you have this component
@@ -9,20 +8,10 @@ import Spline from "@splinetool/react-spline";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import FAQ from "../components/FAQ";
-=======
-import React from "react";
-import styles from "../styles/Home.module.css"; // Make sure you have your CSS file for styling
-import { MediaRenderer } from "@thirdweb-dev/react"; // Assuming you have this component
-import { Navbar } from "../components/Navbar/Navbar";
-import Spline from "@splinetool/react-spline";
-
-
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 
 // Your component
 const AboutUs: React.FC = () => {
-<<<<<<< HEAD
 
 
 
@@ -35,17 +24,11 @@ const AboutUs: React.FC = () => {
 
   return (
     
-=======
-  return (
-   
-
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
     <div className={styles.container}>
       <Navbar />
       {/* Use MediaRenderer for the looping video background */}
       <div style={{ margin: '100px' }}>
   {/* Content of the first section */}
-<<<<<<< HEAD
 
 
  
@@ -77,8 +60,6 @@ const AboutUs: React.FC = () => {
 
 
 
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 </div>
 
 {/* Empty space */}
@@ -94,25 +75,11 @@ const AboutUs: React.FC = () => {
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
       {/* Your title and other content */}
       <h1 className={styles.heroTitle}>
         <p className={styles.herotitle}></p>
         <span className={styles.heroTitleGradient}>WELCOME TO POLYWATCH</span>
       </h1>
-<<<<<<< HEAD
       
     <MediaRenderer
   src="/images/BLACKRED.glb"
@@ -123,14 +90,6 @@ const AboutUs: React.FC = () => {
     justifyContent: 'center',
     alignItems: 'center',
   }}
-=======
-      <MediaRenderer
-  src="ipfs://QmdyGLRPMzw3qjoSsQVqxLPGBB3i8fEF3skinNn78nmzem/BJL.gif"  
-  width="60%"
-  height="60%"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 />
 <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
@@ -143,11 +102,7 @@ const AboutUs: React.FC = () => {
       <p className={styles.heroSubtitle}>
         PolyWatch is more than just an NFT project; it s a project dedicated
         to watch enthusiasts and blockchain lovers. We are here to offer you an
-<<<<<<< HEAD
         exclusive collection of PolyWatch NFTs, each meticulously crafted with
-=======
-        exclusive collection of NFTs, each meticulously crafted with
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
         care and precision.
       </p>
 
@@ -163,7 +118,6 @@ const AboutUs: React.FC = () => {
         special enhancements.
       </p>
     
-<<<<<<< HEAD
       
     <MediaRenderer
   src="/images/DROP38.glb"
@@ -175,15 +129,6 @@ const AboutUs: React.FC = () => {
     alignItems: 'center',
   }}
 />
-=======
-      <MediaRenderer
-  src="ipfs://QmR1ouggQafVQwmL9tXAcpAa7qCjT8DCB5Bwhy3J6W3aYF/J%20KJK.gif"  
-  width="60%"
-  height="60%"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
-/> 
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
@@ -200,7 +145,6 @@ const AboutUs: React.FC = () => {
         blockchain and watch enthusiasts, creating a community that supports
         each other.
       </p>
-<<<<<<< HEAD
       
     <MediaRenderer
   src="/images/SEIKO1.glb"
@@ -211,14 +155,6 @@ const AboutUs: React.FC = () => {
     justifyContent: 'center',
     alignItems: 'center',
   }}
-=======
-      <MediaRenderer
-  src="ipfs://QmZZVdtavQ7BNUbneXbNsDcKchigd9Qk3jXUBKUd4QhptA/KHBQQ.gif"  
-  width="60%"
-  height="60%"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
-  alt="Icona 3"
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 /> <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
@@ -297,33 +233,22 @@ We take pride in being Italian and carrying forward the tradition of excellence 
     
         </div>
     </div>
-<<<<<<< HEAD
     
 <FAQ />
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   </div>
 </div>
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
       {/* Add more sections and relevant information about your business */}
     </div>
     
 
  
 
-<<<<<<< HEAD
 
   );
   
 
-=======
-  );
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 };
 
 export default AboutUs;

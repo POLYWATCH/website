@@ -13,16 +13,10 @@ import {
 } from "@thirdweb-dev/react";
 import { BigNumber, utils } from "ethers";
 import styles from "../styles/TIMEBUY.module.css";
-<<<<<<< HEAD
 import { parseIneligibility } from "../components/utils/parseIneligibility";
 import Link from "next/link";
 import { useSpring } from "react-spring";
 import FAQ from "../components/FAQ";
-=======
-import { parseIneligibility } from "../utils/parseIneligibility";
-import Link from "next/link";
-import { useSpring } from "react-spring";
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
 
 const BuyTime = () => {
   const tokenAddress = "0x40617B73b3115ba887405B503FeF32c98a7dB714";
@@ -390,10 +384,7 @@ const BuyTime = () => {
 
 
 
-<<<<<<< HEAD
 <FAQ />
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
        
       </div>
     );
@@ -426,9 +417,3 @@ const BuyTime = () => {
 
 
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68

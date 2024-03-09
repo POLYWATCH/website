@@ -51,7 +51,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
   );
   
 
-<<<<<<< HEAD
 
 
 
@@ -73,8 +72,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
 
 
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   
   // Connect to NFT Collection smart contract
   const { contract: nftCollection } = useContract(NFT_COLLECTION_ADDRESS);
@@ -191,7 +188,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
   }
 
 
-<<<<<<< HEAD
 
 
 
@@ -229,8 +225,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
 
 
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
   return (
     <>
       <Toaster position="bottom-center" reverseOrder={false} />
@@ -467,7 +461,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
               
          
-<<<<<<< HEAD
           
 
 
@@ -508,10 +501,6 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
 
 
-=======
-            
-          
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
              
          
               </>
@@ -572,7 +561,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-<<<<<<< HEAD
 
 
 
@@ -592,5 +580,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 
 
-=======
->>>>>>> 8bef86cad588b89b5e10c2c98cb5f492be358f68
