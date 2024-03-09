@@ -210,7 +210,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' }, color: 'inherit' }}
             >
-              As a Polywatch NFT holder, you'll receive incredible discounts on the purchase of physical Polywatches. Stay tuned for details on claiming your exclusive discount.
+              As a Polywatch NFT holder, you ll receive incredible discounts on the purchase of physical Polywatches. Stay tuned for details on claiming your exclusive discount.
             </Typography>
           </AccordionDetails>
         </Accordion>
