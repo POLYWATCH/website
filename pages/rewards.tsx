@@ -88,7 +88,9 @@ const AboutUs: React.FC = () => {
   style={{ maxWidth: '100%', maxHeight: '100%' }}
   alt="Icona 3"
 /> 
-
+<p className={styles.heroSubtitle}>
+Customize it by choosing your color and telling us the social profile you want to link to the POLYWATCH T-shirt. 
+</p>
 <MediaRenderer
   src="images/1e5.png"  
   width="60%"
@@ -97,10 +99,16 @@ const AboutUs: React.FC = () => {
   alt="Icona 3"
 /> 
 
+<MediaRenderer
+  src="images/1e6.png"  
+  width="60%"
+  height="60%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+  alt="Icona 3"
+/> 
 
       
 <p className={styles.heroSubtitle}>
-Customize it by choosing your color and telling us the social profile you want to link to the POLYWATCH T-shirt. 
 
 Anyone who scans the Qr Code on your T-shirt will be redirected to the profile of your choice
       </p>
