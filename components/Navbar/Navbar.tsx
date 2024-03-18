@@ -352,7 +352,7 @@ const AdmissionsMenu = React.forwardRef(function AdmissionsMenu(
 
 
 
-              <Link href="/$TIME" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link href="/$Time" style={{ textDecoration: 'none', color: 'inherit' }}>
 
               <ListItem role="none">
               <ListItemButton role="menuitem" {...getTargetProps(1)} sx={{ color: 'white' }}>
