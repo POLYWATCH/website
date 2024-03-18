@@ -243,35 +243,34 @@ type AdmissionsMenuProps = {
   onKeyDown?: (event: React.KeyboardEvent<HTMLAnchorElement>) => void;
 };
 
-const AdmissionsMenu = React.forwardRef(
-  (
-    { href, focusNext, focusPrevious, ...props }: AdmissionsMenuProps,
-    ref: React.ForwardedRef<HTMLAnchorElement>,
-  ) => {
-    const [anchorEl, setAnchorEl] = React.useState<HTMLAnchorElement | null>(null);
-    const { targets, setActiveIndex, getTargetProps } = useRovingIndex({
-      initialActiveIndex: null,
-      vertical: true,
-      handlers: {
-        onKeyDown: (event, fns) => {
-          if (event.key.match(/(ArrowDown|ArrowUp|ArrowLeft|ArrowRight)/)) {
-            event.preventDefault();
-          }
-          if (event.key === 'Tab') {
-            setAnchorEl(null);
-            fns.setActiveIndex(null);
-          }
-          if (event.key === 'ArrowLeft') {
-            setAnchorEl(null);
-            focusPrevious();
-          }
-          if (event.key === 'ArrowRight') {
-            setAnchorEl(null);
-            focusNext();
-          }
-        },
+const AdmissionsMenu = React.forwardRef(function AdmissionsMenu(
+  { href, focusNext, focusPrevious, ...props }: AdmissionsMenuProps,
+  ref: React.ForwardedRef<HTMLAnchorElement>,
+) {
+  const [anchorEl, setAnchorEl] = React.useState<HTMLAnchorElement | null>(null);
+  const { targets, setActiveIndex, getTargetProps } = useRovingIndex({
+    initialActiveIndex: null,
+    vertical: true,
+    handlers: {
+      onKeyDown: (event, fns) => {
+        if (event.key.match(/(ArrowDown|ArrowUp|ArrowLeft|ArrowRight)/)) {
+          event.preventDefault();
+        }
+        if (event.key === 'Tab') {
+          setAnchorEl(null);
+          fns.setActiveIndex(null);
+        }
+        if (event.key === 'ArrowLeft') {
+          setAnchorEl(null);
+          focusPrevious();
+        }
+        if (event.key === 'ArrowRight') {
+          setAnchorEl(null);
+          focusNext();
+        }
       },
-    });
+    },
+  });
     const address = useAddress() ?? ''; // Se address è undefined, viene utilizzato un valore predefinito vuoto
 
     const open = Boolean(anchorEl);
