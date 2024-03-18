@@ -104,35 +104,38 @@ type AboutMenuProps = {
   onKeyDown?: (event: React.KeyboardEvent<HTMLAnchorElement>) => void;
 };
 
-const AboutMenu = React.forwardRef(
-  (
-    { href, focusNext, focusPrevious, ...props }: AboutMenuProps,
-    ref: React.ForwardedRef<HTMLAnchorElement>,
-  ) => {
-    const [anchorEl, setAnchorEl] = React.useState<HTMLAnchorElement | null>(null);
-    const { targets, setActiveIndex, getTargetProps } = useRovingIndex({
-      initialActiveIndex: null,
-      vertical: true,
-      handlers: {
-        onKeyDown: (event, fns) => {
-          if (event.key.match(/(ArrowDown|ArrowUp|ArrowLeft|ArrowRight)/)) {
-            event.preventDefault();
-          }
-          if (event.key === 'Tab') {
-            setAnchorEl(null);
-            fns.setActiveIndex(null);
-          }
-          if (event.key === 'ArrowLeft') {
-            setAnchorEl(null);
-            focusPrevious();
-          }
-          if (event.key === 'ArrowRight') {
-            setAnchorEl(null);
-            focusNext();
-          }
-        },
+const AboutMenu = React.forwardRef(function AboutMenu(
+  { href, focusNext, focusPrevious, ...props }: AboutMenuProps,
+  ref: React.ForwardedRef<HTMLAnchorElement>,
+) {
+  const [anchorEl, setAnchorEl] = React.useState<HTMLAnchorElement | null>(null);
+  const { targets, setActiveIndex, getTargetProps } = useRovingIndex({
+    initialActiveIndex: null,
+    vertical: true,
+    handlers: {
+      onKeyDown: (event, fns) => {
+        if (event.key.match(/(ArrowDown|ArrowUp|ArrowLeft|ArrowRight)/)) {
+          event.preventDefault();
+        }
+        if (event.key === 'Tab') {
+          setAnchorEl(null);
+          fns.setActiveIndex(null);
+        }
+        if (event.key === 'ArrowLeft') {
+          setAnchorEl(null);
+          focusPrevious();
+        }
+        if (event.key === 'ArrowRight') {
+          setAnchorEl(null);
+          focusNext();
+        }
       },
-    });
+    },
+  });
+
+  // Contenuto della funzione...
+
+
 
     const open = Boolean(anchorEl);
     const id = open ? 'about-popper' : undefined;
