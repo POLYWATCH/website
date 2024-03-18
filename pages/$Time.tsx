@@ -12,6 +12,7 @@ import TransferCard from "../components/TransferCard";
 import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
+import { PieChart } from '@mui/x-charts/PieChart';
 
 
 type TokenParams = {
@@ -31,6 +32,13 @@ const TimePage: NextPage = () => {
 
 
 
+  const data = [
+    { id: 0, value: 30, label: 'OWNERS', style: { color: 'white' } },
+    { id: 1, value: 15, label: 'AIRDROP', style: { color: 'white' } },
+    { id: 2, value: 30, label: 'PUBLIC', style: { color: 'white' } },
+    { id: 3, value: 25, label: 'TEAM', style: { color: 'white' } },
+  ];
+  
 
 
 
@@ -318,11 +326,16 @@ const TimePage: NextPage = () => {
 
 {/* Empty space */}
 <div style={{ height: '60px' }} />
-       
-        <MediaRenderer
-                    src="ipfs://QmeNymQVjnsHZ9EbeDbDgBVGkiVe1P34sK64cCritbnf1T/EWFWW.png"
-                    style={{ width: "100%", height: "auto", maxWidth: "800px" }}
-                  />                 
+<PieChart
+  series={[
+    {
+      data,
+      highlightScope: { faded: 'global', highlighted: 'item' },
+      faded: { innerRadius: 30, additionalRadius: -30, color: 'white' },
+    },
+  ]}
+  height={200}
+/>
       </div>
     </div>
     
