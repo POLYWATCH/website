@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar/Navbar";
 
 
 
-
 // Your component
 const AboutUs: React.FC = () => {
   return (
@@ -40,11 +39,11 @@ const AboutUs: React.FC = () => {
        
       </p>
       <p className={styles.heroSubtitle}>
-        START CLAIM FROM JANUARY 10
+        START CLAIM FROM APRIL 25
       </p>
     
       <MediaRenderer
-  src="ipfs://QmR1ouggQafVQwmL9tXAcpAa7qCjT8DCB5Bwhy3J6W3aYF/J%20KJK.gif"  
+  src="images/343g2tled.png"  
   width="60%"
   height="60%"
   style={{ maxWidth: '100%', maxHeight: '100%' }}
@@ -76,12 +75,39 @@ const AboutUs: React.FC = () => {
       </p>
 
       <MediaRenderer
-  src="ipfs://Qmac6gtTRRukwUC5bJ73pnddhjm5ank6Fz1AoAqPA6Bp65/Iconic%20Streetwear%20Shirt%401-1536x730.jpg"  
+  src="images/1e3.png"  
   width="60%"
   height="60%"
   style={{ maxWidth: '100%', maxHeight: '100%' }}
   alt="Icona 3"
 /> 
+<MediaRenderer
+  src="images/1e4.png"  
+  width="60%"
+  height="60%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+  alt="Icona 3"
+/> 
+<p className={styles.heroSubtitle}>
+Customize it by choosing your color and telling us the social profile you want to link to the POLYWATCH T-shirt. 
+
+Anyone who scans the Qr Code on your T-shirt will be redirected to the profile of your choice
+      </p>
+<MediaRenderer
+  src="images/1e6.png"  
+  width="60%"
+  height="60%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+  alt="Icona 3"
+/> 
+<MediaRenderer
+  src="images/1e5.png"  
+  width="60%"
+  height="60%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+  alt="Icona 3"
+/> 
+
 
       
     
