@@ -417,7 +417,7 @@ export default function ExampleNavigationMenu() {
             role="menuitem"
             {...getTargetProps(0)}
             component="a"
-            href="/https://polywatch.xyz/" // Modifica l'href per il link Home
+            href="/" // Modifica l'href per il link Home
             sx={{ color: 'white' }} // Imposta il colore del testo su bianco
           >
             <ListItemDecorator>
