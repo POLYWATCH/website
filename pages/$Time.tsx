@@ -298,6 +298,8 @@ const TimePage: NextPage = () => {
 
 {/* Empty space */}
 <div style={{ height: '40px' }} />
+
+<div style={{ margin: '10px' }}>
 <LineChart
   xAxis={[{ data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }]}
   series={[
@@ -310,7 +312,6 @@ const TimePage: NextPage = () => {
   height={300}
 />
 
-        <div style={{ margin: '10px' }}>
   {/* Content of the first section */}
 </div>
 
