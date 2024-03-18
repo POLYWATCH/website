@@ -13,6 +13,7 @@ import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
 import { PieChart } from '@mui/x-charts/PieChart';
+import { LineChart } from '@mui/x-charts/LineChart';
 
 
 type TokenParams = {
@@ -297,12 +298,18 @@ const TimePage: NextPage = () => {
 
 {/* Empty space */}
 <div style={{ height: '40px' }} />
-        <div className={styles.timeGraph}>
-          <MediaRenderer
-            src="ipfs://QmQai3JNsCZNJp46AUcGzTnKFQfcidn7CLUjiJFNyUuxLs/GRAFICO%20TIME.png"
-            style={{ width: "100%", height: "auto", maxWidth: "800px" }}  // Adjust the maxWidth as needed
-          />
-        </div>
+<LineChart
+  xAxis={[{ data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }]}
+  series={[
+    {
+      data: [0.01, 0.01, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.09, 0.09],
+      area: true,
+    },
+  ]}
+  width={500}
+  height={300}
+/>
+
         <div style={{ margin: '10px' }}>
   {/* Content of the first section */}
 </div>
@@ -316,7 +323,6 @@ const TimePage: NextPage = () => {
         <p className={styles.heroSubtitle}>
           
           
-          Price: 1 MATIC = 100 tIME
           <br />
           Every 500,000 TIME tokens minted increases the price by 20%.
         </p>
