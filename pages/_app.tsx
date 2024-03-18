@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider, coinbaseWallet, embeddedWallet, metamaskWallet, phantomWallet, smartWallet, trustWallet } from "@thirdweb-dev/react";
-import { Navbar } from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 import { NETWORK } from "../const/contractAddresses";
 import "../styles/globals.css";
