@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css"; // Make sure you have your CSS file for styling
 import { MediaRenderer } from "@thirdweb-dev/react"; // Assuming you have this component
-import { Navbar } from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 
 
