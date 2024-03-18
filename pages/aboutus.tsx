@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import styles from "../styles/Home.module.css"; // Make sure you have your CSS file for styling
 import { MediaRenderer, Web3Button, useAddress, useContract, useContractWrite } from "@thirdweb-dev/react"; // Assuming you have this component
-import { Navbar } from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+
 import Spline from "@splinetool/react-spline";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
