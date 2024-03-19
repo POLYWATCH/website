@@ -336,7 +336,7 @@ const TimePage: NextPage = () => {
 <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
-
+<PieChart />
 {/* Empty space */}
 <div style={{ height: '40px' }} />
       {/* Spazio tra le sezioni */}
@@ -352,7 +352,7 @@ const TimePage: NextPage = () => {
       <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
-<PieChart />
+
 {/* Empty space */}
 <div style={{ height: '40px' }} />
         
