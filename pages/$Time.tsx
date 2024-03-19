@@ -3,17 +3,15 @@ import { NextPage } from "next";
 import Link from "next/link";
 import { MediaRenderer, Web3Button, useAddress, useContract, useContractMetadata, useContractRead, useMintToken, useTokenSupply } from "@thirdweb-dev/react";
 
-import { Flex, Avatar, Heading, SimpleGrid, Spinner,Text, Container } from "@chakra-ui/react";
 
-import BalanceCard from "../components/BalanceCard";
 import { TRANSFER_CONTRACT_ADDRESS } from "../const/contractAddresses";
-import TransferCard from "../components/TransferCard";
 
 import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
-import { PieChart } from '@mui/x-charts/PieChart';
-import { LineChart } from '@mui/x-charts/LineChart';
+import PieChart from "../components/PieChart";
+import LineChart from "../components/LineChart";
+
 
 
 type TokenParams = {
@@ -22,6 +20,9 @@ type TokenParams = {
   price: string;
 };
 
+
+
+
 const TimePage: NextPage = () => {
     
 
@@ -29,17 +30,6 @@ const TimePage: NextPage = () => {
 
 
 
-
-
-
-
-  const data = [
-    { id: 0, value: 30, label: 'OWNERS', style: { color: 'white' } },
-    { id: 1, value: 15, label: 'AIRDROP', style: { color: 'white' } },
-    { id: 2, value: 30, label: 'PUBLIC', style: { color: 'white' } },
-    { id: 3, value: 25, label: 'TEAM', style: { color: 'white' } },
-  ];
-  
 
 
 
@@ -300,18 +290,8 @@ const TimePage: NextPage = () => {
 <div style={{ height: '40px' }} />
 
 <div style={{ margin: '10px' }}>
-<LineChart
-  xAxis={[{ data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }]}
-  series={[
-    {
-      data: [0.01, 0.01, 0.01, 0.01, 0.05, 0.05, 0.05, 0.05, 0.09, 0.09],
-      area: true,
-    },
-  ]}
-  width={500}
-  height={300}
-/>
 
+<LineChart/>
   {/* Content of the first section */}
 </div>
 
@@ -333,45 +313,12 @@ const TimePage: NextPage = () => {
 
 {/* Empty space */}
 <div style={{ height: '60px' }} />
-<PieChart
-  series={[
-    {
-      data,
-      highlightScope: { faded: 'global', highlighted: 'item' },
-      faded: { innerRadius: 30, additionalRadius: -30, color: 'white' },
-    },
-  ]}
-  height={200}
-/>
+
       </div>
     </div>
     
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -405,18 +352,10 @@ const TimePage: NextPage = () => {
       <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
-
+<PieChart />
 {/* Empty space */}
 <div style={{ height: '40px' }} />
-        <div className={styles.timeGraph}>
-         
-        </div>
-
-
-
-
-
-
+        
        
 
 
