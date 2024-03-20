@@ -10,8 +10,6 @@ import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
 import PieChart from "../components/PieChart";
-import LineChart from "../components/LineChart";
-
 
 
 type TokenParams = {
@@ -291,7 +289,7 @@ const TimePage: NextPage = () => {
 
 <div style={{ margin: '10px' }}>
 
-<LineChart/>
+
   {/* Content of the first section */}
 </div>
 
@@ -336,7 +334,7 @@ const TimePage: NextPage = () => {
 <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
-<PieChart />
+
 {/* Empty space */}
 <div style={{ height: '40px' }} />
       {/* Spazio tra le sezioni */}
@@ -344,8 +342,10 @@ const TimePage: NextPage = () => {
 
       
             
-
-
+      <div>
+      
+      <PieChart />
+    </div>
 
 
 
@@ -356,7 +356,43 @@ const TimePage: NextPage = () => {
 {/* Empty space */}
 <div style={{ height: '40px' }} />
         
-       
+ 
+
+
+
+
+
+
+<div className={styles.heroBody}>
+              <h1 className={styles.heroTitle}>
+                <span className={styles.heroTitleGradient}>
+                  
+                  <br />
+                  How can I get $TIME ?
+                </span>
+              </h1>
+              
+              <span className={styles.heroSubtitle}>
+              You can acquire $TIME in two primary ways. Firstly, you can purchase it at any time to upgrade your Polywatch. Secondly, you can obtain it simply by holding your Polywatch in your wallet.
+                    </span>
+                   
+            </div>
+
+            
+<div className={styles.heroBody}>
+              <h1 className={styles.heroTitle}>
+                <span className={styles.heroTitleGradient}>
+                  
+                  <br />
+                  Can I trade $TIME ?
+                </span>
+              </h1>
+              
+              <span className={styles.heroSubtitle}>
+              Currently, trading $TIME is not available, but it is planned for the future. Before proceeding with live trading, we aim to establish stability of the token. This will be prioritized by first creating a solid liquidity pool.
+                    </span>
+                   
+            </div>
 
 
 
