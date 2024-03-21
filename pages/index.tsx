@@ -418,9 +418,7 @@ One-by-one
 
 
 
-  <p className={styles.heroSubtitle}>
-  Ltest News
-   </p>
+  
 
 <Spline scene="https://prod.spline.design/fzygWVLkzaqajGv0/scene.splinecode" />
 
