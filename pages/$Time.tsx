@@ -10,7 +10,8 @@ import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
 import PieChart from "../components/PieChart";
-
+import { WorldMap } from "grommet/components/WorldMap";
+import LineChart from "../components/LineChart";
 
 type TokenParams = {
   to: string;
@@ -20,14 +21,12 @@ type TokenParams = {
 
 
 
-
 const TimePage: NextPage = () => {
     
 
 
 
-
-
+  
 
 
 
@@ -224,14 +223,7 @@ const TimePage: NextPage = () => {
                   </Link>
             </div>
           </div>
-
-
-
-
-
-
-
-       
+          
           <button
   onClick={() => {
     // Aggiungi un'interazione utente prima di chiamare addTokenFunction
@@ -283,7 +275,7 @@ const TimePage: NextPage = () => {
         <div style={{ margin: '40px' }}>
   {/* Content of the first section */}
 </div>
-
+<LineChart/>
 {/* Empty space */}
 <div style={{ height: '40px' }} />
 
@@ -395,13 +387,9 @@ const TimePage: NextPage = () => {
             </div>
 
 
-
-
-
-
-
-
-
+            
+       
+            
     
 
         <FAQ />
