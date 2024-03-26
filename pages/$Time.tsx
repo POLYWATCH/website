@@ -10,7 +10,7 @@ import { useMemo, useState } from "react";
 import { BigNumber, ethers } from "ethers";
 import FAQ from "../components/FAQ";
 import PieChart from "../components/PieChart";
-import { WorldMap } from "grommet/components/WorldMap";
+
 import LineChart from "../components/LineChart";
 
 type TokenParams = {
