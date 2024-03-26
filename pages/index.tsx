@@ -185,7 +185,18 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
   
 </Link>
 
-
+<div className={styles.heroSubtitle}>
+   Click the Pass!
+  </div>
+<Link href="/getwl">
+ <MediaRenderer
+  src="images/Card.png"  
+  width="60%"
+  height="60%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+  alt="Icona 3"
+/> 
+</Link>
 
 
 
