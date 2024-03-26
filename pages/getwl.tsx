@@ -34,7 +34,7 @@ const IframeComponent: React.FC = () => {
 
 <h1 className={styles.heroTitle}>
         <p className={styles.herotitle}></p>
-        <span className={styles.heroTitleGradient}>Get you WL PASS</span>
+        <span className={styles.heroTitleGradient}>Get your NFT WL PASS</span>
       </h1>
       
 {/* Empty space */}
