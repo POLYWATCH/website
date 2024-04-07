@@ -1,5 +1,7 @@
 import {
   MediaRenderer,
+  PackRewards,
+  ThirdwebNftMedia,
   useAddress,
   useContract,
   useContractRead,
@@ -16,6 +18,7 @@ import Skeleton from "../../components/Skeleton/Skeleton";
 import {
   MARKETPLACE_ADDRESS,
   NFT_COLLECTION_ADDRESS,
+  PACK_ADDRESS,
   TRANSFER_CONTRACT_ADDRESS,
 } from "../../const/contractAddresses";
 import styles from "../../styles/Profile.module.css";
@@ -23,10 +26,6 @@ import randomColor from "../../util/randomColor";
 import TransferCard from "../../components/TransferCard";
 import { Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
 import BalanceCard from "../../components/BalanceCard";
-
-
-
-
 
 
 
@@ -52,7 +51,6 @@ const address = useAddress();
 function truncateAddress(address: string) {
     return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
 };
-const { contract } = useContract(TRANSFER_CONTRACT_ADDRESS); // Replace with your contract address
 
 const { 
     contract: transferContract,
@@ -70,6 +68,15 @@ const {
 
 
 
+
+
+
+const { contract } = useContract(PACK_ADDRESS, "pack");
+    const { data, isLoading } = useOwnedNFTs(contract, address);
+
+    const [openPackRewards, setOpenPackRewards] = useState<PackRewards>();
+
+    
 
 
 
@@ -145,6 +152,39 @@ const {
 
 
 
+        <div className={styles.container}>
+            <h1>My Packs</h1>
+            <div className={styles.grid}>
+                {!isLoading ? (
+                    data?.map((pack, index) => (
+                        <div key={index} className={styles.nftCard}>
+                            <ThirdwebNftMedia
+                            metadata={pack.metadata}
+                            />
+                            <div className={styles.myCardInfo}>
+                                <h3>{pack.metadata.name}</h3>
+                                <p>Qty owned: {pack.quantityOwned}</p>
+                            </div>
+                            
+                        </div>
+                    ))
+                    ) : (
+                    <p>Loading...</p>
+                )}
+           
+                </div>
+           
+        </div>
+
+
+
+
+
+        <div style={{ margin: '20px' }}>
+  {/* Content of the first section */}
+</div>
+{/* Empty space */}
+<div style={{ height: '20px' }} />
 
 
 
@@ -154,8 +194,77 @@ const {
 
 
 
+<div className={styles.container}>
+            <h1>  $TIME BALANCE
 
 
+              
+    <MediaRenderer
+                    src="ipfs://QmQ8ywg5bcgNGefKKk1Ur6FX8iDmVT2AKU3MB6vC1wRLCu/4g5.png"
+                    style={{ width: "60%", height: "auto", maxWidth: "80px" }}
+                  />   
+            </h1>
+           
+    
+                
+           </div>
+
+
+
+           {address ? (
+           <Flex>
+    <Flex flexDirection={"column"} mr={8} p={10}>
+      
+      
+    </Flex>
+   
+
+<SimpleGrid columns={3} spacing={4} mt={4} width="100%" margin="auto">
+        {!isVerifiedTokensLoading ? (
+          verifiedTokens.map((token: string) => (
+            <BalanceCard key={token} tokenAddress={"0x40617B73b3115ba887405B503FeF32c98a7dB714"} 
+            
+            />
+                    
+ 
+          ))
+        ) : (
+          <Spinner />
+                  
+      
+        )}
+                
+     
+      </SimpleGrid>
+    </Flex>
+  
+) : (
+  <Flex>
+    <p>CONNECT YOUR WALLET TO SEE YOUR BALANCE</p>
+  </Flex>
+)}
+
+
+
+
+        
+
+
+
+        <div style={{ margin: '20px' }}>
+  {/* Content of the first section */}
+</div>
+{/* Empty space */}
+<div style={{ height: '20px' }} />
+
+
+
+
+
+
+
+
+    
         {/* Terza sezione con l'accesso alle opportunità */}
        
         <div className={styles.hero}>
@@ -175,64 +284,11 @@ const {
           </div>
              
          
-              {address ? (
-  <Flex>
-    <Flex flexDirection={"column"} mr={8} p={10}>
-      
-      
-    </Flex>
-   
-    <div className={styles.heroBodyContainer}>
-  <div className={styles.heroBody}>
-    <h1 className={styles.heroTitle}>
-      <span className={styles.heroTitle}>
-        YOUR $TIME BALANCE
-      </span>
-    </h1>
-   
-    
-    <MediaRenderer
-                    src="ipfs://QmQ8ywg5bcgNGefKKk1Ur6FX8iDmVT2AKU3MB6vC1wRLCu/4g5.png"
-                    style={{ width: "60%", height: "auto", maxWidth: "200px" }}
-                  />   
-
-
-
-
-
-  </div>
-</div>
-
-
-
-<SimpleGrid columns={3} spacing={4} mt={4} width="100%" margin="auto">
-        {!isVerifiedTokensLoading ? (
-          verifiedTokens.map((token: string) => (
-            <BalanceCard key={token} tokenAddress={"0x40617B73b3115ba887405B503FeF32c98a7dB714"} />
-          ))
-        ) : (
-          <Spinner />
-        )}
-      </SimpleGrid>
-    </Flex>
-  
-) : (
-  <Flex>
-    <p>CONNECT YOUR WALLET TO SEE YOUR BALANCE</p>
-  </Flex>
-)}
+             
 
 
 
 </div>
-
-
-
-
-
-
-
-
 
 
 
