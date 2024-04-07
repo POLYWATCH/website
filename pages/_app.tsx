@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     activeChain={activeChain}
     
     >
-    
+  
       <Navbar/>
       <Component {...pageProps} />
     </ThirdwebProvider>
