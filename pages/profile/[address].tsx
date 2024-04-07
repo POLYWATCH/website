@@ -41,9 +41,6 @@ const [randomColor1, randomColor2, randomColor3, randomColor4] = [
 export default function ProfilePage() {
 
 
-
-
-
  
 const address = useAddress();
 
