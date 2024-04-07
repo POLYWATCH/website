@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider 
     clientId="1f9299646db2cb55a1505c9032a58601"
     activeChain={activeChain}
-    
+  
     >
   
       <Navbar/>
