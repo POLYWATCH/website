@@ -13,7 +13,6 @@ const smartWalletConfig ={
   gasless: false
 
 }
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider 
