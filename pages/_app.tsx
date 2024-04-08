@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 
 const activeChain = "polygon";
-const smartWalletConfig ={
+const smartWalletConfig = {
 
   factoryAddress : "" ,
   gasless: false
@@ -15,6 +15,7 @@ const smartWalletConfig ={
 }
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    
     <ThirdwebProvider 
     clientId="1f9299646db2cb55a1505c9032a58601"
     activeChain={activeChain}
