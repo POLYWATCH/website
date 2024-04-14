@@ -818,3 +818,22 @@
  
 
 }
+
+
+/* Aggiungi questi stili nel tuo file CSS (Home.module.css) */
+
+.quantitySelector input {
+  width: 10%; /* Larghezza del 100% per riempire tutto lo spazio disponibile */
+  padding: 10px; /* Spaziatura interna per renderlo più grande */
+  border: none; /* Rimuovi il bordo */
+  background-color: rgb(78, 0, 155); /* Sfondo bianco */
+  border-radius: 5px; /* Bordi arrotondati */
+  font-size: 16px; /* Dimensione del testo */
+  margin-top: 10px; /* Spaziatura sopra */
+}
+
+.quantitySelector label {
+  margin-top: 10px; /* Spaziatura sopra */
+  display: block; /* Assicura che il label sia visualizzato su una riga separata */
+}
+
