@@ -20,12 +20,6 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     const [quantity, setQuantity] = useState<number>(1); // Default quantity is set to 1
     const [isEligible, setIsEligible] = useState<boolean>(false); // State to track eligibility
 
-    const authorizedWallets = [
-        '0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2',
-        '0x3d6d1E0580131819E795bAE5D222f43b99e2dC29', // Aggiungi qui il secondo wallet autorizzato
-        '0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621'  // Aggiungi qui il terzo wallet autorizzato
-    ];
-
     useEffect(() => {
         if (packListings && tokenId) {
             const filteredListings = Object.values(packListings).filter(
@@ -37,12 +31,18 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 
     useEffect(() => {
         // Verifica se l'indirizzo del wallet è autorizzato
+        const authorizedWallets = [
+            '0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2',
+            '0x3d6d1E0580131819E795bAE5D222f43b99e2dC29',
+            '0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621'
+        ];
+
         if (authorizedWallets.includes(address || '')) {
             setIsEligible(true); // Imposta la variabile di stato su true se è idoneo
         } else {
             setIsEligible(false); // Imposta la variabile di stato su false se non è idoneo
         }
-    }, [address, authorizedWallets]);
+    }, [address]);
 
     async function buyPack() {
         let txResult;
