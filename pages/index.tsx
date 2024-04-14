@@ -186,11 +186,11 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
 </Link>
 
 <div className={styles.heroSubtitle}>
-   Click the Pass!
+   CLICK THE IMAGE AND GET YOUR POLYWATCH BOX!
   </div>
-<Link href="/getwl">
+<Link href="/shop">
  <MediaRenderer
-  src="images/Card.png"  
+  src="images/676.png"  
   width="60%"
   height="60%"
   style={{ maxWidth: '100%', maxHeight: '100%' }}
@@ -215,7 +215,7 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
                     <Link className={styles.heroCta} href="/buytime">
                       CLAIM $TIME
                     </Link>
-                    <Link className={styles.heroCta} href="/claim">
+                    <Link className={styles.heroCta} href="/shop">
                       CLAIM POLYWATCH
                     </Link>
 
