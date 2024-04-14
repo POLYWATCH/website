@@ -7,7 +7,6 @@ type Props = {
     contractAddress: string;
     tokenId: any;
 };
-
 export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     const address = useAddress();
     const { contract: packContract } = useContract(contractAddress);
