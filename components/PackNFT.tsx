@@ -2700,7 +2700,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 
         if (validPackListings && validPackListings.length > 0) {
             // Trova il listing valido per il pacchetto desiderato
-            const validListing = validPackListings[6]; // Seleziona il primo listing valido
+            const validListing = validPackListings[7]; // Seleziona il primo listing valido
 
             if (validListing) {
                 // Verifica che l'indirizzo del wallet sia autorizzato
@@ -2740,15 +2740,15 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                     </div>
                     <div className={styles.packInfo}>
                         <h3>{packNFT?.metadata.name}</h3>
-                        {validPackListings.length > 6 && validPackListings[6] ? (
+                        {validPackListings.length > 6 && validPackListings[7] ? (
     <>
-        <p>Cost: {validPackListings[6].currencyValuePerToken?.displayValue} {` ` + validPackListings[6].currencyValuePerToken?.symbol}</p>
-        <p>Supply: {validPackListings[6].quantity}</p>
+        <p>Cost: {validPackListings[7].currencyValuePerToken?.displayValue} {` ` + validPackListings[7].currencyValuePerToken?.symbol}</p>
+        <p>Supply: {validPackListings[7].quantity}</p>
     </>
 ) : (
-    // Gestione del caso in cui validPackListings non contiene abbastanza elementi o validPackListings[6] è undefined
-    <p>1 POLYWATCH</p>
+    <></>
 )}
+
 
 
                         <div className={styles.quantitySelector}>
