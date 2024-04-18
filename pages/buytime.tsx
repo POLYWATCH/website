@@ -354,6 +354,9 @@ const barColor = 'hsl(120, 100%, 75%)'; // Verde chiaro
         <br />
         Every 500,000 TIME tokens minted increases the price by 20%.
       </p>
+      <div>
+            <MediaRenderer src="/images/IHPPI.gif" />
+          </div> 
 
       <Link
         className={styles.heroCta}
