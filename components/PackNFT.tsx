@@ -2728,7 +2728,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                                 id="quantity"
                                 name="quantity"
                                 min="1"
-                                max="5" // Imposta la quantità massima consentita
+                                max="10" // Imposta la quantità massima consentita
                                 value={quantity}
                                 onChange={(e) => setQuantity(parseInt(e.target.value))}
                                 className={styles.quantityInput} // Applica lo stile CSS personalizzato
