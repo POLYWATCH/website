@@ -289,7 +289,7 @@ const barColor = 'hsl(120, 100%, 75%)'; // Verde chiaro
   {claimedSupply.isError && <p>Error loading data.</p>}
   {claimedSupply.data && (
     <div>
-      <p style={{ color: 'gold' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue} / 1350000</p>
+      <p style={{ color: 'lightgreen' }}>TOTAL TIME COLLECTED: {claimedSupply.data.displayValue} / 1350000</p>
       <div style={{ backgroundColor: 'lightgrey', height: '20px', borderRadius: '5px', marginTop: '10px', overflow: 'hidden', border: '1px solid white' }}>
         <div style={{ backgroundColor: '#00ff00', height: '100%', width: `${(parseFloat(claimedSupply.data.displayValue) / 1350000) * 100}%`, borderRadius: '5px', transition: 'width 0.5s ease-in-out, background-color 0.5s ease-in-out' }}></div>
       </div>
@@ -301,7 +301,7 @@ const barColor = 'hsl(120, 100%, 75%)'; // Verde chiaro
       
  
 <p className={styles.heroSubtitle}>
-  <span style={{ color: 'gold' }}>Next goal: </span>
+  <span style={{ color: 'lightgreen' }}>Next goal: </span>
   <span>{0.0144}</span>
   <br />
   
@@ -361,7 +361,7 @@ const barColor = 'hsl(120, 100%, 75%)'; // Verde chiaro
       <Link
         className={styles.heroCta}
         href="https://polygonscan.com/address/0x40617B73b3115ba887405B503FeF32c98a7dB714"
-        style={{ color: 'gold' }}
+        style={{ color: 'lightgreen' }}
       >
         CLICK HERE TO IMPORT $TIME TO YOUR WALLET
       </Link>
