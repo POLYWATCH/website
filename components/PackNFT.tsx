@@ -2714,8 +2714,8 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                         <h3>{packNFT?.metadata.name}</h3>
                         {validPackListings.length > 0 ? (
                             <>
-                                <p>Cost: {validPackListings[0].currencyValuePerToken.displayValue} {` ` + validPackListings[0].currencyValuePerToken.symbol}</p>
-                                <p>Supply: {validPackListings[0].quantity}</p>
+                                <p>Cost: {validPackListings[6].currencyValuePerToken.displayValue} {` ` + validPackListings[6].currencyValuePerToken.symbol}</p>
+                                <p>Supply: {validPackListings[6].quantity}</p>
                             </>
                         ) : (
                             <p>1 PACK</p>
