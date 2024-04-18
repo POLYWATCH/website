@@ -1,7 +1,7 @@
+import { MediaRenderer, Web3Button, useAddress, useContract, useNFT, useDirectListings } from "@thirdweb-dev/react";
 import { useEffect, useState } from 'react';
-import { useAddress, useContract, useNFT, useDirectListings, Web3Button, MediaRenderer } from "@thirdweb-dev/react";
-import { MARKETPLACE_ADDRESS1, PACK_ADDRESS } from "../const/contractAddresses";
 import styles from "../styles/Home.module.css";
+import { MARKETPLACE_ADDRESS1, PACK_ADDRESS } from "../const/contractAddresses";
 
 type Props = {
     contractAddress: string;
@@ -10,35 +10,23 @@ type Props = {
 
 export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     const address = useAddress();
+    const { contract: marketplace, isLoading: loadingMarketplace } = useContract(MARKETPLACE_ADDRESS1, "marketplace-v3");
     const { contract: packContract } = useContract(contractAddress);
     const { data: packNFT, isLoading: loadingNFT } = useNFT(packContract, tokenId);
-    const { contract: marketplace } = useContract(MARKETPLACE_ADDRESS1, "marketplace-v3");
-    const { data: packListings } = useDirectListings(marketplace, {
-        tokenContract: PACK_ADDRESS,
-    });
-    const [validPackListings, setValidPackListings] = useState<any[] | null>(null);
+    const { data: packListings, isLoading: loadingPackListings } = useDirectListings(
+        marketplace,
+        { tokenContract: PACK_ADDRESS }
+    );
     const [quantity, setQuantity] = useState<number>(1); // Default quantity is set to 1
+    
     const [isEligible, setIsEligible] = useState<boolean>(false); // State to track eligibility
 
-    useEffect(() => {
-        if (packListings && tokenId) {
-            const filteredListings = Object.values(packListings).filter(
-                (listing: any ) => listing.tokenId === tokenId
-            );
-            setValidPackListings(filteredListings);
-        }
-    }, [packListings, tokenId]);
-
-    useEffect(() => {
-        // Verifica se l'indirizzo del wallet è autorizzato
-        const authorizedWallets = [
-            '0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2',
-            '0x3d6d1E0580131819E795bAE5D222f43b99e2dC29',
-            '0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621',
-
-         
-'0+A3:F174xB45BE695aEB02c754C77839eec97B9BfDFE53a67',
-'0x47cF771a150AFdc05865a0d3fa87eECE63F89924',
+    // Verifica se l'indirizzo del wallet è autorizzato
+    const authorizedWallets = [
+        '0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2',
+        '0x3d6d1E0580131819E795bAE5D222f43b99e2dC29',
+        '0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621',
+        '0x47cF771a150AFdc05865a0d3fa87eECE63F89924',
 
 '0xD4002Aa2664D82f694AD339E54A84f9B6708bAAc',
 '0xDf6360D4D0Cf4f891a681C7eF192c55B2030543A',
@@ -2683,73 +2671,60 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 '0x9b33f118B3f404670d500EF8a4531188794eaA68',
 
 
+    ];
 
-
-
-        ];
-
-        if (authorizedWallets.includes(address || '')) {
-            setIsEligible(true); // Imposta la variabile di stato su true se è idoneo
-        } else {
-            setIsEligible(false); // Imposta la variabile di stato su false se non è idoneo
-        }
+    // Effetto per controllare l'id dell'indirizzo del wallet e impostare la variabile di stato di eleggibilità
+    useEffect(() => {
+        setIsEligible(authorizedWallets.includes(address || ''));
     }, [address]);
 
     async function buyPack() {
         let txResult;
 
-        if (validPackListings && validPackListings.length > 0) {
-            // Trova il listing valido per il pacchetto desiderato
-            const validListing = validPackListings[7]; // Seleziona il primo listing valido
+        const directListingId = 7; // Imposta il direct listing ID desiderato
 
-            if (validListing) {
-                // Verifica che l'indirizzo del wallet sia autorizzato
-                if (isEligible) {
-                    try {
-                        txResult = await marketplace?.directListings.buyFromListing(
-                            validListing.id, // Usa l'ID del listing qui
-                            quantity // Usa la quantità selezionata qui
-                        );
-                    } catch (error) {
-                        console.error("Error buying pack:", error);
-                        // Gestisci l'errore dell'acquisto del pacchetto
-                    }
-                } else {
-                    throw new Error("Unauthorized wallet address");
+        if (packListings && packListings[directListingId]) {
+            const listing = packListings[directListingId];
+            // Verifica che l'indirizzo del wallet sia autorizzato
+            if (isEligible) {
+                try {
+                    txResult = await marketplace?.directListings.buyFromListing(listing.id, quantity);
+                } catch (error) {
+                    console.error("Error buying pack:", error);
+                    // Gestisci l'errore dell'acquisto del pacchetto
                 }
             } else {
-                throw new Error("No valid listing found");
+                throw new Error("Unauthorized wallet address");
             }
         } else {
-            throw new Error("No valid listings found");
+            throw new Error("No valid listing found");
         }
             
         return txResult;
-    }
+    };
 
     return (
         <div className={styles.packCard}>
-            {!loadingNFT && validPackListings ? (
+            {!loadingNFT && !loadingPackListings ? (
                 <div className={styles.shopPack}>
                     <div>
                         <MediaRenderer
                             src={packNFT?.metadata.image}
-                            width="40%"
+                            width="80%"
                             height="100%"
                         />
                     </div>
                     <div className={styles.packInfo}>
                         <h3>{packNFT?.metadata.name}</h3>
-                        {validPackListings.length > 6 && validPackListings[7] ? (
-    <>
-        <p>Cost: {validPackListings[7].currencyValuePerToken?.displayValue} {` ` + validPackListings[7].currencyValuePerToken?.symbol}</p>
-        <p>Supply: {validPackListings[7].quantity}</p>
-    </>
-) : (
-    <></>
-)}
-
-
+                        
+                        {packListings && packListings[7] ? (
+                            <>
+                                <p>Cost: {packListings[7].currencyValuePerToken.displayValue} {` ` + packListings[7].currencyValuePerToken.symbol}</p>
+                                <p>Supply: {packListings[7].quantity}</p>
+                            </>
+                        ) : (
+                            <p>No valid listing found</p>
+                        )}
 
                         <div className={styles.quantitySelector}>
                             <label htmlFor="quantity">Select quantity:</label>
@@ -2769,9 +2744,9 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                         ) : (
                             <div className={styles.buyButtonContainer}>
                                 {isEligible ? (
-                                    <p>You re eligible!</p>
+                                    <p>You're eligible!</p>
                                 ) : (
-                                    <p>You re not eligible, head over to the public mint</p>
+                                    <p>You're not eligible, head over to the public mint</p>
                                 )}
                                 <Web3Button
                                     contractAddress={MARKETPLACE_ADDRESS1}
@@ -2785,5 +2760,5 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                 <p>Loading...</p>
             )}
         </div>
-    );
-}
+    )
+};
