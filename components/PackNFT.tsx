@@ -2700,7 +2700,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 
         if (validPackListings && validPackListings.length > 0) {
             // Trova il listing valido per il pacchetto desiderato
-            const validListing = validPackListings[0]; // Seleziona il primo listing valido
+            const validListing = validPackListings[6]; // Seleziona il primo listing valido
 
             if (validListing) {
                 // Verifica che l'indirizzo del wallet sia autorizzato
