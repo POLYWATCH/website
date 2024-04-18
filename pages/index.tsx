@@ -190,7 +190,7 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
   </div>
 <Link href="/shop">
  <MediaRenderer
-  src="images/676.png"  
+  src="images/WLBOX2.png"  
   width="60%"
   height="60%"
   style={{ maxWidth: '100%', maxHeight: '100%' }}
