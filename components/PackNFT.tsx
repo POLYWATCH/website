@@ -18,7 +18,6 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     const [validPackListings, setValidPackListings] = useState<any[] | null>(null);
     const [quantity, setQuantity] = useState<number>(1); // Default quantity is set to 1
     const [isEligible, setIsEligible] = useState<boolean>(false); // State to track eligibility
-
     useEffect(() => {
         if (packListings && tokenId) {
             const filteredListings = Object.values(packListings).filter(
