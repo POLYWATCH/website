@@ -7,6 +7,7 @@ type Props = {
     contractAddress: string;
     tokenId: any;
 };
+
 export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     const address = useAddress();
     const { contract: packContract } = useContract(contractAddress);
@@ -18,6 +19,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     const [validPackListings, setValidPackListings] = useState<any[] | null>(null);
     const [quantity, setQuantity] = useState<number>(1); // Default quantity is set to 1
     const [isEligible, setIsEligible] = useState<boolean>(false); // State to track eligibility
+
     useEffect(() => {
         if (packListings && tokenId) {
             const filteredListings = Object.values(packListings).filter(
@@ -32,28 +34,48 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
         const authorizedWallets = [
             '0x5bf4638a312c0DecfAD4E59465C44a51DA0604e2',
             '0x3d6d1E0580131819E795bAE5D222f43b99e2dC29',
-            '0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621',       
+            '0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621',
 
+         
+'0+A3:F174xB45BE695aEB02c754C77839eec97B9BfDFE53a67',
 '0x47cF771a150AFdc05865a0d3fa87eECE63F89924',
+
 '0xD4002Aa2664D82f694AD339E54A84f9B6708bAAc',
 '0xDf6360D4D0Cf4f891a681C7eF192c55B2030543A',
+
 '0xAca3F06100f998a89b52d785BA89A827fDF04085',
 '0xb5cCBf15F7B0239a92C757782a073F7007AD403f',
+
 '0xcc667EC003C424118417B8e36b9ff83Cfc4822cd',
+
 '0x8845bf2954ce316FD3e76377c44DC3e44A54B897',
-'0x5d6d1DF57E8D25434F92E8Ff87B9343E2326C621',
+
+
 '0x4062E299C31F3D694Ba32D4acfe502f4CAE91801',
 '0xA5333A74fbD7Fd5118d1612af4766CF98a6A524c',
+
+
+
+
+
 '0xb4604a423488a8B2BA00961779d8e990B3F7d3E4',
+
 '0x7Fa0963a8CB41d12C0bBa4286141dd71Ba158F44',
 '0x487EE6DaAf8BE1bA7763eDf469Ee1F6680184D4f',
+
+
 '0x68fAebCA9F5c4E55B60f90Dd481e81eC6b8Ed9F7',
 '0xc08e2D29f287A4Cd0cf93E4622F6A9679BC49Ab6',
-'0x7DAC2CE052AD5F39E0380568980220E8dcA26CC3',
+
 '0x6de8bdD19Cd76b89Ea2EB1ab6d9b245433652ef9',
+
 '0xEaE73BEA3e0D649ae9213BEcA51787DE8Bf0C71f',
 '0x0bD81F5D56A7f4ED0e32826aad8f48C2D0Bee001',
 '0xb9459C6BB200a4882AeE44389E47830f98c6770E',
+
+
+
+
 '0x84669c919679391b6ED195006d14c1F345066b14',
 '0x3ECAFb2DaC795fC3C64b4Bba5435A2C7b78c1560',
 '0xc751E05386BE5453F7303F011d0241403cD6B040',
@@ -161,6 +183,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 '0x27642383DEfe9a1c667A219E8a89563DF61EFe19',
 '0xfD399730c8589845cfcA307A959C524Bb4EF037B',
 '0x1C690E7616957c8892a7F8827546C278D9E64d8C',
+
 '0x54370CBCAeEE8b3Fc8bE6f2dD1E465B5CDFaCC8F',
 '0xf0839C8A19eC22d046Fe686322e564E9c82497CB',
 '0x01ef7ebA55862222637cC2e29A12b54521a25bF1',
@@ -182,11 +205,15 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 '0xe8649082EEE23151e1289FA0C3a7F048f87c0d42',
 '0x41526FDAE6697aCc9CB89A9C5F90b9fF3b9dCC70',
 '0xD418a8CbbAdabfa84A3B63c1Bc750eF2755726d1',
+
 '0x78dfc10Ff477e9974Fd3Dc8Af4d3e3440aA0492b',
+
 '0xC51a1ed683E2569403f351f63cF970ae22533cB6',
 '0x6D259AE20D9dDfe1fc854E289A6b72a5bb82F632',
 '0x1C40527E54d0f4Aa3E5205F17357Ec77FF1A22a8',
+
 '0xDe8dE160A7aa8DCFc0b711B77464F0a5BF32fd3F',
+
 '0x63b9dFBfddeD6C8eB436A7A45A2F259bd43b6Cd8',
 '0x717674e08CC056B1F5890419C6aD1f6a374A5F49',
 '0xC1d4898E36DED14C02085A8E6D5b5DAe546b98Df',
@@ -2616,6 +2643,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
 '0x43f94b2b81fa25d4a352cdf013a33a192c57dad9',
 '0x0abc7c5905f3fefbf3687d4598a6958a4a6ecbc2',
 '0xb9fbbefa64f2f6dcc6959ddd4eca12580ad92cc1',
+'0x7dac2ce052ad5f39e0380568980220e8dca26cc3',
 '0xa1f6420de4af52db60c8e82d3c52ae4b397c503f',
 '0x445332bef5e261e70025143b40f16419b3a3f9cb',
 '0xba55a4ad8b09c532fd5f330768a5c415e5cd689b',
@@ -2712,14 +2740,17 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                     </div>
                     <div className={styles.packInfo}>
                         <h3>{packNFT?.metadata.name}</h3>
-                        {validPackListings.length > 0 ? (
-                            <>
-                                <p>Cost: {validPackListings[6].currencyValuePerToken.displayValue} {` ` + validPackListings[6].currencyValuePerToken.symbol}</p>
-                                <p>Supply: {validPackListings[6].quantity}</p>
-                            </>
-                        ) : (
-                            <p>1 PACK</p>
-                        )}
+                        {validPackListings.length > 6 && validPackListings[6] ? (
+    <>
+        <p>Cost: {validPackListings[6].currencyValuePerToken?.displayValue} {` ` + validPackListings[6].currencyValuePerToken?.symbol}</p>
+        <p>Supply: {validPackListings[6].quantity}</p>
+    </>
+) : (
+    // Gestione del caso in cui validPackListings non contiene abbastanza elementi o validPackListings[6] è undefined
+    <p>1 POLYWATCH</p>
+)}
+
+
                         <div className={styles.quantitySelector}>
                             <label htmlFor="quantity">Select quantity:</label>
                             <input
@@ -2727,10 +2758,10 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                                 id="quantity"
                                 name="quantity"
                                 min="1"
-                                max="14" // Imposta la quantità massima consentita
+                                max="10" // Imposta la quantità massima consentita
                                 value={quantity}
                                 onChange={(e) => setQuantity(parseInt(e.target.value))}
-                                className={styles.quantityInput} 
+                                className={styles.quantityInput} // Applica lo stile CSS personalizzato
                             />
                         </div>
                         {!address ? (
