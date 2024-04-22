@@ -327,32 +327,19 @@ const barColor = 'hsl(120, 100%, 75%)'; // Verde chiaro
 
 
 
- 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div style={{ margin: '40px' }} />
       <p className={styles.heroSubtitle}>
         <span style={{ color: 'gold' }}></span>
         <br />
         Every 500,000 TIME tokens minted increases the price by 20%.
+      </p>
+     
+      <p className={styles.heroSubtitle}>
+        <span style={{ color: 'gold' }}></span>
+        <br />
+        Public sale supply : 30 MILLION TIME tokens.  
+
+WHEN ALL 30 MILLION TOKENS ARE MINTED THE PRICE WILL BE 0.2 MATIC PER 1 TOKEN $TIME
       </p>
       <div>
             <MediaRenderer src="/images/IHPPI.gif" />
@@ -372,3 +359,22 @@ const barColor = 'hsl(120, 100%, 75%)'; // Verde chiaro
 };
 
 export default BuyTime;
+
+
+
+
+
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
