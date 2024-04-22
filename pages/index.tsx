@@ -53,12 +53,15 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
   return (
     <>
     
-<div className={styles.splineContainer}>
-      <Spline
-        scene="https://prod.spline.design/1YbqWrHPBmGG0m8c/scene.splinecode"
-        className={styles.spline} // Puoi utilizzare una classe CSS specifica per il componente Spline
-      />
-    </div>
+<h1 className={styles.heroTitle}>
+    <p className={styles.herotitle}></p>
+    <span className={styles.heroTitleGradient} style={{ fontSize: "2em" }}>
+        POLYWATCH
+    </span>
+</h1>
+
+
+<div style={{ height: '120px' }} />
 
 
 
