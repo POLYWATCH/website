@@ -81,7 +81,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                             <p>Login to buy</p>
                         ) : (
                             <div className={styles.buyButtonContainer}>
-                                <p>You're eligible!</p>
+                                <p>You re eligible!</p>
                                 <Web3Button
                                     contractAddress={MARKETPLACE_ADDRESS1}
                                     action={() => buyPack()}
