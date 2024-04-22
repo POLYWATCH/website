@@ -52,7 +52,7 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
 
   return (
     <>
-    
+    <div style={{ height: '120px' }} />
 <h1 className={styles.heroTitle}>
     <p className={styles.herotitle}></p>
     <span className={styles.heroTitleGradient} style={{ fontSize: "2em" }}>
