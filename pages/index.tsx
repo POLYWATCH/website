@@ -52,16 +52,17 @@ import { Button, Card, CardBody,  CardFooter, CardHeader, Heading, SimpleGrid } 
 
   return (
     <>
-    <div style={{ height: '120px' }} />
-<h1 className={styles.heroTitle}>
-    <p className={styles.herotitle}></p>
-    <span className={styles.heroTitleGradient} style={{ fontSize: "2em" }}>
+
+<div className={styles.backgroundContainer} style={{ backgroundImage: `url('/images/joo.gif')`, backgroundSize: 'contain', height: '450px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <h1 className={styles.heroTitle}>
+    <span className={styles.heroTitleGradient} style={{ fontSize: "1.5em" }}>
         POLYWATCH
     </span>
-</h1>
+  </h1>
+</div>
 
 
-<div style={{ height: '120px' }} />
+
 
 
 
