@@ -124,6 +124,28 @@ export default function Shop() {
 
 
             </div>
+
+
+
+
+  <MediaRenderer
+  src="images/989.gif"  
+  width="30%"
+  height="30%"
+  style={{ maxWidth: '100%', maxHeight: '100%' }}
+ 
+/> 
+        
+       
+
+
+
+
+            </div>
+            <h1>Watch loading...</h1>
+
+
+            
         </div>
     );
 }
