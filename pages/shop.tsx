@@ -1,11 +1,8 @@
-import { ThirdwebNftMedia, useAddress, useContract, useOwnedNFTs, useValidDirectListings } from "@thirdweb-dev/react";
+import { MediaRenderer, ThirdwebNftMedia, useAddress, useContract, useOwnedNFTs, useValidDirectListings } from "@thirdweb-dev/react";
 import { PackNFTCard } from "../components/PackNFT";
 import { MARKETPLACE_ADDRESS1, PACK_ADDRESS } from "../const/contractAddresses";
-
 import styles from "../styles/Home.module.css";
 import Higlits from "../components/Higlits";
-
-
 
 export default function Shop() {
     const {
@@ -31,31 +28,12 @@ export default function Shop() {
     const { data, isLoading } = useOwnedNFTs(contract, address);
 
     return (
-       
-      
-      
-
-
         <div className={styles.container}>
-
-
-
-
-
-
-
-<div style={{ margin: '40px' }}>
-  {/* Content of the first section */}
-</div>
-
-{/* Empty space */}
-<div style={{ height: '40px' }} />
-
-
-
-
-
-
+            <div style={{ margin: '40px' }}>
+                {/* Content of the first section */}
+            </div>
+            {/* Empty space */}
+            <div style={{ height: '40px' }} />
 
             <h1>Shop Packs</h1>
             <div className={styles.grid}>
@@ -68,84 +46,46 @@ export default function Shop() {
                                 contractAddress={validListing.assetContractAddress}
                                 tokenId={validListing.tokenId}
                             />
-                            
-        
                         </div>
-                        
                     ))
-                   
-
                 )}
+            </div>
 
+            <div style={{ margin: '30px' }}>
+                {/* Content of the first section */}
+            </div>
+            {/* Empty space */}
+            <div style={{ height: '30px' }} />
+            <Higlits/>
 
-<div style={{ margin: '30px' }}>
-  {/* Content of the first section */}
-</div>
-
-{/* Empty space */}
-<div style={{ height: '30px' }} />
- <Higlits/>
-
-
-
-
-
-
-
-
-  <div className={styles.container}>
-            <h1>My Packs</h1>
-            <div className={styles.grid}>
-                {!isLoading ? (
-                    data?.map((pack, index) => (
-                        <div key={index} className={styles.nftCard}>
-                            <ThirdwebNftMedia
-                            metadata={pack.metadata}
-                            />
-                            <div className={styles.myCardInfo}>
-                                <h3>{pack.metadata.name}</h3>
-                                <p>Qty owned: {pack.quantityOwned}</p>
+            <div className={styles.container}>
+                <h1>My Packs</h1>
+                <div className={styles.grid}>
+                    {!isLoading ? (
+                        data?.map((pack, index) => (
+                            <div key={index} className={styles.nftCard}>
+                                <ThirdwebNftMedia
+                                    metadata={pack.metadata}
+                                />
+                                <div className={styles.myCardInfo}>
+                                    <h3>{pack.metadata.name}</h3>
+                                    <p>Qty owned: {pack.quantityOwned}</p>
+                                </div>
                             </div>
-                            
-                        </div>
-                    ))
+                        ))
                     ) : (
-                    <p>Loading...</p>
-                )}
-           
+                        <p>Loading...</p>
+                    )}
                 </div>
-           
-        </div>
-
-
-
-
-
-
-
             </div>
 
-
-
-
-  <MediaRenderer
-  src="images/989.gif"  
-  width="30%"
-  height="30%"
-  style={{ maxWidth: '100%', maxHeight: '100%' }}
- 
-/> 
-        
-       
-
-
-
-
-            </div>
+            <MediaRenderer
+                src="images/989.gif"  
+                width="30%"
+                height="30%"
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
+            /> 
             <h1>Watch loading...</h1>
-
-
-            
         </div>
     );
 }
