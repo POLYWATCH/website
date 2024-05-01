@@ -3,11 +3,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1%;
-  width: 140%;
+  width: 140%; /* Larghezza della griglia aumentata per consentire una maggiore spaziatura tra le card */
 }
 
 .nftContainer {
-  width: 17.8%;
+  width: 30%; /* Larghezza delle card ridotta per consentire una visualizzazione migliore su dispositivi mobili */
   margin: 8px;
   position: relative;
   overflow: hidden;
@@ -20,13 +20,13 @@
   padding: 8px;
   max-height: 382px;
   transition: all 0.25s ease-in-out;
-  background: #4c076500;;
+  background: #4c076500;
 }
 
 .nftContainer:hover {
   cursor: pointer;
   transform: translate3d(0px, -4px, 0px);
-  box-shadow: 0px 4px 8px rgb(248, 246, 249)
+  box-shadow: 0px 4px 8px rgb(248, 246, 249);
 }
 
 .title {
@@ -40,21 +40,79 @@
 @media (min-width: 1200px) {
 }
 
-@media (min-width: 760px) and (max-width: 1200px) {
+/* Responsive */
+
+/* Larghezza delle card per dispositivi di dimensioni medio-piccole */
+@media (max-width: 960px) {
   .nftContainer {
-    width: 22%;
+    width: 40%; /* Larghezza delle card aumentata per una migliore visualizzazione su dispositivi mobili */
   }
 }
 
-@media (min-width: 600px) and (max-width: 760px) {
-  .nftContainer {
-    width: 29%;
-  }
-}
-
-/* Less than 600 */
+/* Larghezza delle card per dispositivi di dimensioni molto piccole */
 @media (max-width: 600px) {
   .nftContainer {
-    width: 45%;
+    width: 60%; /* Larghezza delle card aumentata ulteriormente per una migliore visualizzazione su dispositivi mobili */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Buy.module.css */
+
+/* Contenitore del carosello */
+.nftCarouselContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Carosello */
+.nftCarousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 10px; /* Aggiunge spazio inferiore per la visibilità del punto di scorrimento */
+}
+
+/* Elemento del carosello */
+.nftContainer {
+  flex: 0 0 auto;
+  margin-right: 20px; /* Aggiunge spazio tra gli elementi del carosello */
+}
+
+/* Barra di scorrimento */
+.nftCarousel::-webkit-scrollbar {
+  width: 8px; /* Larghezza della barra di scorrimento */
+}
+
+.nftCarousel::-webkit-scrollbar-track {
+  background: #f1f1f13d; /* Colore di sfondo della barra di scorrimento */
+}
+
+.nftCarousel::-webkit-scrollbar-thumb {
+  background: #a200e2; /* Colore della maniglia della barra di scorrimento */
+  border-radius: 5px; /* Bordo arrotondato della maniglia */
+}
+
+.nftCarousel::-webkit-scrollbar-thumb:hover {
+  background: #ac04e9; /* Cambia colore al passaggio del mouse sopra la maniglia */
+}
+
+/* Stili per la visualizzazione su dispositivi mobili */
+@media only screen and (max-width: 600px) {
+  .nftContainer {
+    margin-right: 10px; /* Riduce lo spazio tra gli elementi del carosello su dispositivi mobili */
   }
 }
