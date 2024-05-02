@@ -15,8 +15,9 @@ import LoadingSpinner from "../components/LoadingSpinner";
 
 const Home: NextPage = () => {
   return (
+    <LoadingSpinner />
     <>
-      <LoadingSpinner />
+     
       <div style={{ padding: "20px", textAlign: "center" }}>
         {/* Media Renderer */}
         <div style={{ marginBottom: "20px" }}>
