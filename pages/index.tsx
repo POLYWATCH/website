@@ -10,14 +10,10 @@ import Spline from '@splinetool/react-spline';
 import Highlights from "../components/Highlights";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-
-
-
 const Home: NextPage = () => {
   return (
-    <LoadingSpinner />
-    <>
-     
+    <div> {/* Aggiungi un wrapper esterno */}
+      <LoadingSpinner />
       <div style={{ padding: "20px", textAlign: "center" }}>
         {/* Media Renderer */}
         <div style={{ marginBottom: "20px" }}>
@@ -36,7 +32,7 @@ const Home: NextPage = () => {
           <Highlights />
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
