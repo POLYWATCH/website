@@ -5,49 +5,38 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import Link from 'next/link'; // Importa il componente Link da Next.js
 
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Polygon Blockchain',
-    description:
-      'Polywatch is an ERC721 token built on the Polygon Blockchain .',
+    title: 'POLYWATCH PACK',
+    description: 'Get your POLYWATCH BOX.',
+    href: '/shop', // URL per POLYWATCH PACK
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
-    description:
-      'Long-lasting investment, perfect for Watch enthusiasts.',
+    title: '$TIME',
+    description: 'Polywatch governance token.',
+    href: '/$Time', // URL per $TIME
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
-    description:
-      'Integrate our watches into your routine,look and play with them whenever you want.',
+    title: 'ABOUT US',
+    description: 'Find out more about POLYWATCH.',
+    href: '/aboutus', // URL per ABOUT US
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
-    description:
-      'Decentralized,secure and inclusive even for those new to the web3.',
+    title: 'EVOLVE',
+    description: 'Play, evolve and earn.',
+    href: '/evolve/evolve', // URL per EVOLVE
   },
   {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
-    description:
-      'Count on our responsive customer support, join our discord server',
+    title: 'BLOG',
+    description: 'Latest info about Polywatch.',
+    href: '/blog', // URL per BLOG
   },
   {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
-    description:
-      'Enjoy a meticulously crafted product where small touches make your watch unique.',
+    title: 'MARKETPLACE',
+    description: 'Polywatch official marketplace.',
+    href: '/buy', // URL per MARKETPLACE
   },
 ];
 
@@ -78,45 +67,37 @@ export default function Highlights() {
             width: { sm: '100%', md: '60%' },
             textAlign: { sm: 'left', md: 'center' },
           }}
-        >
-          <Typography component="h2" variant="h4">
-            INFO
-          </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: decentralization, uniqueness,
-            user-friendly design. Precision in every detail.
-          </Typography>
-        </Box>
+        />
         <Grid container spacing={2.5}>
           {items.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-              <Stack
-                direction="column"
-                color="inherit"
-                component={Card}
-                spacing={1}
-                useFlexGap
-                sx={{
-                  p: 3,
-                  height: '100%',
-                  border: '1px solid',
-                  borderColor: 'grey.800',
-                  background: hoveredCard === index ? '#8e24aa' : 'transparent',
-                  transition: 'background-color 0.3s',
-                }}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
-                <div>
+              <Link href={item.href} passHref>
+                <Stack
+                  direction="column"
+                  alignItems="center"
+                  color="inherit"
+                  component={Card}
+                  spacing={1}
+                  useFlexGap
+                  sx={{
+                    p: 3,
+                    height: '100%',
+                    border: '1px solid',
+                    borderColor: 'grey.800',
+                    background: hoveredCard === index ? '#8e24aa' : 'transparent',
+                    transition: 'background-color 0.3s',
+                  }}
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                >
                   <Typography fontWeight="medium" gutterBottom>
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'grey.400' }}>
+                  <Typography variant="body2" sx={{ color: 'grey.400', textAlign: 'center' }}>
                     {item.description}
                   </Typography>
-                </div>
-              </Stack>
+                </Stack>
+              </Link>
             </Grid>
           ))}
         </Grid>
