@@ -13,7 +13,9 @@ import LoadingSpinner from "../components/LoadingSpinner";
 const Home: NextPage = () => {
   return (
     <div> {/* Aggiungi un wrapper esterno */}
+      {/* Utilizza LoadingSpinner come componente JSX qui */}
       <LoadingSpinner />
+
       <div style={{ padding: "20px", textAlign: "center" }}>
         {/* Media Renderer */}
         <div style={{ marginBottom: "20px" }}>
