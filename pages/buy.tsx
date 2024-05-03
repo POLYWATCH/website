@@ -26,6 +26,8 @@ export default function Buy() {
       />
  
 
+ <div style={{ height: '200px' }} />
+
     </Container>
   );
 }
