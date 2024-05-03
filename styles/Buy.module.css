@@ -1,74 +1,34 @@
-.nftGridContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1%;
-  width: 140%; /* Larghezza della griglia aumentata per consentire una maggiore spaziatura tra le card */
+.nftContainerCard {
+  background-color: #ffffff; /* Sfondo bianco */
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
+  max-width: 140px; /* Imposta la larghezza massima */
+  max-height: 200px; /* Imposta l'altezza massima */
+  overflow: hidden; /* Nasconde eventuali contenuti che superano le dimensioni */
+  border: 1px solid #eaeaea; /* Sottile bordo grigio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per effetto 3D */
+  background-image: url('/images/2o2.png'); /* Aggiungi la texture d'immagine */
+  background-size: cover; /* Imposta la dimensione dell'immagine per coprire l'intera carta */
 }
 
-.nftContainer {
-  width: 30%; /* Larghezza delle card ridotta per consentire una visualizzazione migliore su dispositivi mobili */
-  margin: 8px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  backface-visibility: hidden;
-  outline: 1px solid rgb(255, 255, 255);
-  transform: translate3d(0px, 0px, 0px);
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-  max-height: 382px;
-  transition: all 0.25s ease-in-out;
-  background: #4c076500;
+.nftContainerCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra al passaggio del mouse */
 }
 
-.nftContainer:hover {
-  cursor: pointer;
-  transform: translate3d(0px, -4px, 0px);
-  box-shadow: 0px 4px 8px rgb(248, 246, 249);
+.nftCardName {
+  margin: 0;
+  font-size: 1rem; /* Riduci la dimensione del font */
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  color: rgb(249, 248, 248);
+  text-shadow: 1px 1px 2px rgba(131, 0, 212, 0.2); /* Aggiungi un'ombra al nome per enfatizzarlo */
 }
-
-.title {
-  padding: 8px;
-  font-size: 3rem;
-  margin-bottom: 8px;
-}
-
-
-@media (min-width: 1200px) {
-}
-
-/* Responsive */
-
-/* Larghezza delle card per dispositivi di dimensioni medio-piccole */
-@media (max-width: 960px) {
-  .nftContainer {
-    width: 40%; /* Larghezza delle card aumentata per una migliore visualizzazione su dispositivi mobili */
-  }
-}
-
-/* Larghezza delle card per dispositivi di dimensioni molto piccole */
-@media (max-width: 600px) {
-  .nftContainer {
-    width: 60%; /* Larghezza delle card aumentata ulteriormente per una migliore visualizzazione su dispositivi mobili */
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Buy.module.css */
 
 /* Contenitore del carosello */
 .nftCarouselContainer {
@@ -82,18 +42,18 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding-bottom: 10px; /* Aggiunge spazio inferiore per la visibilità del punto di scorrimento */
+  padding-bottom: 6px; /* Aggiunge spazio inferiore per la visibilità del punto di scorrimento */
 }
 
 /* Elemento del carosello */
-.nftContainer {
+.nftCarousel .nftContainerCard {
   flex: 0 0 auto;
-  margin-right: 20px; /* Aggiunge spazio tra gli elementi del carosello */
+  margin-right: 10px; /* Aggiunge spazio tra gli elementi del carosello */
 }
 
 /* Barra di scorrimento */
 .nftCarousel::-webkit-scrollbar {
-  width: 8px; /* Larghezza della barra di scorrimento */
+  width: 6px; /* Larghezza della barra di scorrimento */
 }
 
 .nftCarousel::-webkit-scrollbar-track {
@@ -107,11 +67,4 @@
 
 .nftCarousel::-webkit-scrollbar-thumb:hover {
   background: #ac04e9; /* Cambia colore al passaggio del mouse sopra la maniglia */
-}
-
-/* Stili per la visualizzazione su dispositivi mobili */
-@media only screen and (max-width: 600px) {
-  .nftContainer {
-    margin-right: 10px; /* Riduce lo spazio tra gli elementi del carosello su dispositivi mobili */
-  }
 }
