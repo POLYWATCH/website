@@ -24,7 +24,7 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
     async function buyPack() {
         let txResult;
 
-        const directListingId = 7; // Imposta il direct listing ID desiderato
+        const directListingId = 8; // Imposta il direct listing ID desiderato
 
         if (packListings && packListings[directListingId]) {
             const listing = packListings[directListingId];
@@ -48,17 +48,17 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                     <div>
                         <MediaRenderer
                             src={packNFT?.metadata.image}
-                            width="80%"
-                            height="100%"
+                            width="30%"
+                            height="60%"
                         />
                     </div>
                     <div className={styles.packInfo}>
-                        <h3>{packNFT?.metadata.name}</h3>
+                    <p>POLYWATCH BOX</p>
                         
-                        {packListings && packListings[7] ? (
+                        {packListings && packListings[8] ? (
                             <>
-                                <p>Cost: {packListings[7].currencyValuePerToken.displayValue} {` ` + packListings[7].currencyValuePerToken.symbol}</p>
-                                <p>Supply: {packListings[7].quantity}</p>
+                                <p>Cost: {packListings[8].currencyValuePerToken.displayValue} {` ` + packListings[8].currencyValuePerToken.symbol}</p>
+                                <p>Supply: {packListings[8].quantity}</p>
                             </>
                         ) : (
                             <p>No valid listing found</p>
@@ -81,7 +81,8 @@ export const PackNFTCard = ({ contractAddress, tokenId }: Props) => {
                             <p>Login to buy</p>
                         ) : (
                             <div className={styles.buyButtonContainer}>
-                                <p>You re eligible!</p>
+                                <p>
+                                    All ready!</p>
                                 <Web3Button
                                     contractAddress={MARKETPLACE_ADDRESS1}
                                     action={() => buyPack()}
