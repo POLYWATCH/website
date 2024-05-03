@@ -3,6 +3,7 @@ import { PackNFTCard } from "../components/PackNFT";
 import { MARKETPLACE_ADDRESS1, PACK_ADDRESS } from "../const/contractAddresses";
 import styles from "../styles/Home.module.css";
 import Higlits from "../components/Higlits";
+import FAQ from "../components/FAQ";
 
 export default function Shop() {
     const {
@@ -35,7 +36,7 @@ export default function Shop() {
             {/* Empty space */}
             <div style={{ height: '40px' }} />
 
-            <h1>Shop Packs</h1>
+            <h1>Shop BOX</h1>
             <div className={styles.grid}>
                 {loadingValidDirectListings ? (
                     <p>Loading...</p>
@@ -79,13 +80,14 @@ export default function Shop() {
                 </div>
             </div>
 
-            <MediaRenderer
-                src="images/989.gif"  
-                width="30%"
-                height="30%"
-                style={{ maxWidth: '100%', maxHeight: '100%' }}
-            /> 
-            <h1>Watch loading...</h1>
+            
+            <FAQ />
+       
         </div>
+        
+        
+           
     );
+    
+        
 }
