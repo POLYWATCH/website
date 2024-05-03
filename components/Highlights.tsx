@@ -31,7 +31,7 @@ const items = [
   {
     title: 'BLOG',
     description: 'Latest info about Polywatch.',
-    href: '/blog', // URL per BLOG
+    href: '/Blog', // URL per BLOG
   },
   {
     title: 'MARKETPLACE',
