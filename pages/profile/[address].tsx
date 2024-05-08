@@ -26,6 +26,8 @@ import randomColor from "../../util/randomColor";
 import TransferCard from "../../components/TransferCard";
 import { Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
 import BalanceCard from "../../components/BalanceCard";
+import { Link } from "@mui/material";
+
 
 
 
@@ -157,7 +159,7 @@ const { contract } = useContract(PACK_ADDRESS, "pack");
                             <div className={styles.myCardInfo}>
                                 <h3>{pack.metadata.name}</h3>
                                 <p>Qty owned: {pack.quantityOwned}</p>
-                              <a href="/reveal" className={styles.saleButton}>Open Pack</a>
+                                  <Link href="/reveal" className={styles.saleButton}>Open Pack</Link>
 
                             </div>
                             
