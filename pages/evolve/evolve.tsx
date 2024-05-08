@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import { MediaRenderer } from "@thirdweb-dev/react";
+import Navbar from "../../components/Navbar/Navbar";
 
 const AboutUs: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const AboutUs: React.FC = () => {
         </div>
         
         <div >
-         
+           <Navbar />
         </div>
         
 
