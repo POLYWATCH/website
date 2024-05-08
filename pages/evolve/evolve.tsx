@@ -12,7 +12,7 @@ const AboutUs: React.FC = () => {
         <div className={styles.threeDBox}>
           <h1 className={styles.heroTitle}>
             <p className={styles.herotitle}></p>
-            <span className={styles.heroTitleGradient}> evolve YOUR POLYWATCH... SOON</span>
+            <span className={styles.heroTitleGradient}> EVOLVE YOUR POLYWATCH... SOON</span>
           </h1>
         </div>
         
