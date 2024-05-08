@@ -64,9 +64,6 @@ const {
 
 
 
-
-
-
 const { contract } = useContract(PACK_ADDRESS, "pack");
     const { data, isLoading } = useOwnedNFTs(contract, address);
 
