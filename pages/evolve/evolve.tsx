@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
 import { MediaRenderer } from "@thirdweb-dev/react";
-import Navbar from "../components/Navbar/Navbar";
 
 const AboutUs: React.FC = () => {
   return (
     <div className={styles.container}>
-      <Navbar />
       
       {/* Utilizza Flexbox per i tre riquadri in una riga */}
       <div className={styles.threeDBoxContainer}>
