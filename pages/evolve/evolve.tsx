@@ -1,71 +1,49 @@
-import styles from "../../styles/evolve.module.css";
-import { NextPage } from "next";
-import { CONTRACT_ADDRESS } from "../../const/contractAddresses";
-import { NFTCard } from "../../components/NFTCard";
-import Link from "next/link";
+import React from "react";
+import styles from "../styles/Home.module.css";
+import { MediaRenderer } from "@thirdweb-dev/react";
+import Navbar from "../components/Navbar/Navbar";
 
-const Home: NextPage = () => {
-    const address = useAddress();
-  
-    const { contract } = useContract(CONTRACT_ADDRESS);
-  
-    const {
-      data: ownedNFTs,
-      isLoading: isOwnedNFTsLoading,
-    } = useOwnedNFTs(contract, address);
-  
-    if(!address) {
-      return (
-        <div className={styles.main}>
-          <div className={styles.centeredContainer}>
-            <div className={styles.centeredCard}>
-              <h1>Evolving POLYWATCH</h1>
-              <ConnectWallet />
-            </div>
-          </div>
-        </div>
-      );
-    };
-    return (
-        <main className={styles.main}>
-        <div style={{ margin: '100px' }}>
-          {/* Content of the first section */}
-        </div>
+const AboutUs: React.FC = () => {
+  return (
+    <div className={styles.container}>
+      <Navbar />
       
-        {/* Empty space */}
-        <div style={{ height: '100px' }} />
-      
-        <div className={styles.container}>
-          <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", maxHeight: "48px", marginTop: "10px" }}>
-            <h1>MY POLYWATCH</h1>
-          </div>
-          <div className={styles.nftGrid}> {/* Aggiungi questa classe per la griglia */}
-            {!isOwnedNFTsLoading && (
-              ownedNFTs && ownedNFTs.length > 0 ? (
-                ownedNFTs.map((nft) => (
-                  <div key={nft.metadata.id} className={styles.nftCard}>
-                    <p className={styles.nftCardName}>{nft.metadata.name}</p>
-                    <Link href={`/evolve/${nft.metadata.id}`} style={{ width: "100%" }}>
-                      <button className={styles.button}>Train</button>
-                    </Link>
-                    <NFTCard nft={nft} />
-                  </div>
-                ))
-              ) : (
-                <p>No Polywatch</p>
-              )
-            )}
-          </div>
-          
+      {/* Utilizza Flexbox per i tre riquadri in una riga */}
+      <div className={styles.threeDBoxContainer}>
+        <div className={styles.threeDBox}>
+          <h1 className={styles.heroTitle}>
+            <p className={styles.herotitle}></p>
+            <span className={styles.heroTitleGradient}> evolve YOUR POLYWATCH... SOON</span>
+          </h1>
         </div>
-        <div style={{ height: '200px' }} />
+        
+        <div >
+         
+        </div>
+        
 
 
 
-      </main>
-      
 
-    );
+
+
+
+
+
+
+
+
+        <div className={styles.threeDBox}>
+          <p className={styles.heroSubtitle}>
+           
+          </p>
+        </div>
+      </div>
+
+      {/* Altri contenuti o sezioni secondo necessità */}
+    </div>
+  );
 };
 
-export default Home;
+export default AboutUs;
+
