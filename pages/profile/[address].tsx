@@ -160,6 +160,8 @@ const { contract } = useContract(PACK_ADDRESS, "pack");
                             <div className={styles.myCardInfo}>
                                 <h3>{pack.metadata.name}</h3>
                                 <p>Qty owned: {pack.quantityOwned}</p>
+                              <a href="/reveal" className={styles.saleButton}>Open Pack</a>
+
                             </div>
                             
                         </div>
